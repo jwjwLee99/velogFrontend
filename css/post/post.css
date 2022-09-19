@@ -684,7 +684,64 @@ button.disable {
 .rtrSection .rtrSec1 {
     margin-top: -1.5rem;
 }
-.rtrSection .rtrBox .rtrElement {
+.rtrSection .rtrList .rtrBox {
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
+}
+.rtrSection .rtrList .rtrBox .rtrUser {
+    margin-bottom: 1.5rem;
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    align-items: center;
+}
+.rtrSection .rtrList .rtrBox .rtrUser .rtrProfile {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+}
+.rtrSection .rtrList .rtrBox .rtrUser .rtrProfile a img {
+    width: 3.375rem;
+    height: 3.375rem;
+    display: block;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.rtrSection .rtrList .rtrBox .rtrUser .rtrProfile .rtrInfo {
+    margin-left: 1rem;
+    line-height: 1;
+}
+.rtrSection .rtrList .rtrBox .rtrUser .rtrProfile .rtrInfo .rtrName {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #212529;
+}
+.rtrSection .rtrList .rtrBox .rtrUser .rtrProfile .rtrInfo .rtrName a {
+    color: inherit;
+}
+.rtrSection .rtrList .rtrBox .rtrUser .rtrProfile .rtrInfo .rtrRegdate {
+    margin-top: 0.5rem;
+    color: #868E96;
+    font-size: 0.875rem;
+}
+.rtrSection .rtrList .rtrBox .rtrDesc {
+    font-size: 1.125rem;
+    color: #212529;
+    transition: color 0.125s ease-in 0s;
+    line-height: 1.7;
+    letter-spacing: keep-all;
+    overflow-wrap: break-word;
+}
+.rtrText {
+    font-size: 1.125rem;
+    color: #212529;
+    transition: color 0.125s ease-in 0s;
+    line-height: 1.7;
+    letter-spacing: -0.004em;
+    word-break: keep-all;
+    overflow-wrap: break-word;
+}
+.replyBox + .replyBox {
+    border-top: 1px solid #F1F3F5;
 }
