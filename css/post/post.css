@@ -1,0 +1,99 @@
+a {
+    cursor: pointer !important;
+}
+#container {
+    margin-top: 5.5rem;
+    width: 768px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#container .titleWrap h1{
+    font-size: 3rem;
+    font-weight: bold;
+    line-height: 1.5;
+    letter-spacing: -0.004em;
+    margin-top: 0px;
+    color: #212529;
+    margin-bottom: 2rem;
+    word-break: keep-all;
+    transition: color 0.125s ease-in 0s;
+}
+#container .titleWrap .postInfo {
+    -webkit-box-align: center;
+    align-items: center;
+    font-size: 1rem;
+    counter-reset: #495057;
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+}
+#container .titleWrap .postInfo .authorId{
+    color: #212529;
+    font-weight: bold;
+}
+#container .titleWrap .postInfo .authorId a {
+    color: inherit;
+    text-decoration: none;
+}
+#container .titleWrap .postInfo .separator {
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+}
+#container .titleWrap .tagInfo {
+    margin-top: 0.875rem;
+    margin-bottom: -0.875rem;
+    min-height: 00.875rem;
+}
+
+#container .mainContents {
+    width: 768px;
+    margin: 5rem auto 0px;
+}
+
+#container .authorInfo {
+    margin-top: 16rem;
+    margin-bottom: 6rem;
+    width: 768px;
+    margin-left: auto;
+    margin-right: auto;
+}
+#container .authorInfo .author {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+}
+#container .authorInfo .author > img {
+    display: block;
+    width: 8rem;
+    height: 8rem;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: rgb(0 0 0 / 6%) 0px 0px 4px 0px;
+}
+
+#container .authorInfo .authorDetail {
+    display: flex;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    justify-content: center;
+    margin-left: 1rem;
+}
+#container .authorInfo .authorDetail .authorName {
+    font-size: 1.5rem;
+    line-height: 1.5;
+    font-weight: bold;
+    color: #212529;
+}
+#container .authorInfo .authorDetail .authorName {
+    color: inherit;
+    text-decoration: none;
+}
+#container .authorInfo .authorDetail .authorDesc {
+    white-space: pre-wrap;
+    font-size: 1.125rem;
+    line-height: 1.5;
+    margin-top: 0.25rem;
+    color: #495057;
+    letter-spacing: -0.004em;
+}
