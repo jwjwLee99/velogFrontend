@@ -371,3 +371,21 @@ div#scrollMoveHeader .tabMenu .menu{
     width: 120px;
     height: auto;
 }
+
+/* 공통 CSS */
+.tagElement{
+    margin-bottom: 00.875rem;
+    background: #F8F9FA;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    height: 2rem;
+    border-radius: 1rem;
+    display: inline-block;
+    -webkit-box-align: center;
+    align-items: center;
+    margin-right: 0.875rem;
+    color: #12B886;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1rem;
+}
