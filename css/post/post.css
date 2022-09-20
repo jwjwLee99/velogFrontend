@@ -70,7 +70,6 @@
     align-items: center;
 }
 #container .titleWrap .leftSideMenu .leftbox .likeAndShare .likeBox {
-    transform: scale(1);
     height: 3rem;
     width: 3rem;
     display: flex;
@@ -252,6 +251,7 @@ div.shareIcon svg {
     align-items: center;
 }
 .seriesInfo .seriesHide .showSeries{
+    user-select: none;
     display: flex;
     -webkit-box-align: center;
     align-items: center;
@@ -270,7 +270,7 @@ div.shareIcon svg {
     line-height: 1;
     cursor: pointer;
 }
-.hideSeries:hover {
+.hideSeries:hover , .showSeries:hover{
     font-weight: 700;
 }
 .showAndHide {
