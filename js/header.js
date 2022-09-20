@@ -7,12 +7,10 @@ $(() => {
         let currentScroll = $(this).scrollTop();
         let scrollTop = $(window).scrollTop();
     
-        if(currentScroll < previousScroll + 1){
-            sh.fadeIn(1000)
-            console.log("up")
+        if(currentScroll < previousScroll){
+            sh.fadeIn("fast")
         }else {
-            sh.fadeOut(500)
-            console.log("down")
+            sh.fadeOut("fast")
         }
         if(scrollTop == 0){
             sh.css("display" , "none")
