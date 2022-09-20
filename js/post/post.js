@@ -17,6 +17,20 @@ $(() => {
         
     })
 
+    // 좌측 좋아요
+    let isLike = true;
+    let likebtn = $(".likeBox");
+    likebtn.click(()=> {
+        if(isLike){
+            likebtn.animate({
+                backgroundColor:"#12B886",
+                color:"#fff",
+                transform:"scale(1.2)"
+            }, 1000)
+        }
+        
+    })
+
     // 좌측 공유 텝
     let sharebtn = $(".shareIcon");
     let facebook = $(".etcbox1");
