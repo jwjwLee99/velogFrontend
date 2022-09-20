@@ -2,6 +2,10 @@ a {
     cursor: pointer !important;
     text-decoration: none;
 }
+.dpNone {
+    display: none !important;
+}
+
 /* header.css */
 * {
     box-sizing: inherit;
@@ -9,13 +13,13 @@ a {
 
 #root {
     margin: 0 auto;
-    width: 90%;
 }
 
 /* 고정 헤더 */
-header{
-    width: 100%;
+header, #scrollMoveHeader, .section{
+    width: 90%;
     height: 4rem;
+    margin: 0 auto;
 }
 
 /* headerBox */
