@@ -112,7 +112,7 @@ nav button.visualMode{
     border: none;
     cursor: pointer;
     border-radius: 50%;
-    width: 2.5rem;
+    width: 2rem;
     height: 2.5rem;
     margin-right: 0.25rem;
     color: white;
@@ -125,10 +125,10 @@ nav button.visualMode .visualBtn{
     left: 50%;
     transform: translate(-50%, -50%);
 }
-
+.visualMode:hover {
+    background: rgba(0,0,0,0.05);
+}
 nav button.visualMode .visualBtn .visual{
-    transform: scale(1) rotate(0deg);
-    opacity: 1;
     color: #212529;
 }
 
@@ -152,6 +152,9 @@ nav a.search{
     cursor: pointer;
     margin-right: 0.5rem;
 }
+a.search:hover {
+    background: rgba(0,0,0,0.05);
+}
 
 nav a.search > svg {
     width: 1.125rem;
@@ -165,7 +168,7 @@ nav button.newPosting {
     padding-left: 1rem;
     padding-right: 1rem;
     font-size: 1rem;
-    border-radius: 1rem;
+    border-radius: 1.5rem;
     outline: none;
     font-weight: bold;
     word-break: keep-all;
@@ -175,10 +178,14 @@ nav button.newPosting {
     transition: all 0.125s ease-in 0s;
     cursor: pointer;
 }
+.newPosting:hover {
+    background: #212529;
+    color: #fff;
+}
 
 /* user Login Button 로그인 전에 display : block */
 nav button.userLoginBtn{
-    display: none;
+    display: block;
     height: 2rem;
     padding-left: 1rem;
     padding-right: 1rem;
@@ -193,6 +200,9 @@ nav button.userLoginBtn{
     transition: all 0.125s ease-in 0s;
     cursor: pointer;
 }
+.userLoginBtn:hover {
+    background: #343A40;
+}
 
 /* login 후 */
 nav div div.userSection{
@@ -201,7 +211,7 @@ nav div div.userSection{
     -webkit-box-align: center;
     align-items: center;
 }
-nav div div.userSection > img {
+nav div div.userSection img {
     display: block;
     height: 2.5rem;
     width: 2.5rem;
@@ -210,13 +220,17 @@ nav div div.userSection > img {
     object-fit: cover;
     transition: all 0.125s ease-in 0s;
 }
-nav div div.userSection > svg {
+nav div div.userSection svg {
     font-size: 1.5rem;
     margin-left: 0.25rem;
     color: #868E96;
     transition: all 0.125s ease-in 0s;
     margin-right: -0.4375rem;
 }
+nav div div.userSection > svg:hover {
+    color: #212529 !important;
+}
+
 
 /* scroll move header : 마우스 휠 위로 올릴때 나오도록 설정 필요*/
 #scrollMoveHeader{

@@ -8,14 +8,20 @@ $(() => {
         let scrollTop = $(window).scrollTop();
     
         if(currentScroll < previousScroll){
-            sh.fadeIn("fast")
+            sh.slideDown("fast")
         }else {
-            sh.fadeOut("fast")
+            sh.slideUp("fast")
         }
         if(scrollTop == 0){
-            sh.css("display" , "none")
+            sh.fadeOut(1)
         }
         previousScroll = currentScroll;
+    })
+    $("nav div div.userSection img").mouseover(()=> {
+        $("nav div div.userSection > svg").css("color", "#212529")
+    })
+    $("nav div div.userSection img").mouseout(()=> {
+        $("nav div div.userSection > svg").css("color", "#868E96")
     })
 })
 
