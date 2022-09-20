@@ -16,7 +16,7 @@ a {
 }
 
 /* 고정 헤더 */
-header, #scrollMoveHeader, .section{
+header, .section{
     width: 90%;
     height: 4rem;
     margin: 0 auto;
@@ -219,22 +219,24 @@ nav div div.userSection > svg {
 }
 
 /* scroll move header : 마우스 휠 위로 올릴때 나오도록 설정 필요*/
-div#scrollMoveHeader{
+#scrollMoveHeader{
     display: none;
-    margin-top: -104px;
-    opacity: 0;
+    height: 4rem;
     position: fixed;
     top: 0px;
-    background: #fff;
     width: 100%;
+    background: #fff;
+    padding-left: 95px;
     z-index: 10;
     box-shadow: rgb(0 0 0 /8%) 0px 0px 8px;
 }
-
-div#scrollMoveHeader .tabMenu {
+#scrollMoveHeader nav {
+    margin-right: 190px;
+}
+#scrollMoveHeader .tabMenu {
     margin-top: -2rem;
 }
-div#scrollMoveHeader .tabMenu .menu{
+#scrollMoveHeader .tabMenu .menu{
     margin-left: auto;
     margin-right: auto;
 }
