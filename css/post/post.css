@@ -261,6 +261,9 @@ div.shareIcon svg {
 .seriesInfo ol li {
     text-align: -webkit-match-parent;
 }
+.seriesInfo ol li a{
+    color: #212529;
+}
 .seriesInfo ol li::before {
     content: counter(item) ". ";
     counter-increment: item 1;
@@ -269,7 +272,7 @@ div.shareIcon svg {
     margin-right: 0.25rem;
 }
 a.selectContents{
-    color: #12B886;
+    color: #12B886 !important;
     font-weight: bold;
 }
 .countList {
