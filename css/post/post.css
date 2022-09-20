@@ -1,4 +1,6 @@
-
+#root{
+    z-index: -1000;
+}
 #container {
     margin-top: 5.5rem;
     margin-left: auto;
@@ -97,31 +99,37 @@
     font-weight: bold;
 }
 .shareBox {
+    position: relative;
+    width: 100%;
+    z-index: 5;
+
+}
+.shareBox .positioner {
     position: absolute;
 }
-.shareBox .etcbox1 {
-    opacity: 0;
+.shareBox .positioner .etcbox1 {
+    display: none;
     transform: translate(0px, 0px);
     top: 0px;
-    left: 0px;
+    left: 7px;
     position: absolute;
     width: 48px;
     height: 48px;
 }
-.shareBox .etcbox2 {
-    opacity: 0;
+.shareBox .positioner .etcbox2 {
+    display: none;
     transform: translate(0px);
     top: 0px;
-    left: 0px;
+    left: 7px;
     position: absolute;
     width: 48px;
     height: 48px;
 }
-.shareBox .etcbox3 {
-    opacity: 0;
+.shareBox .positioner .etcbox3 {
+    display: none;
     transform: translate(0px);
     top: 0px;
-    left: 0px;
+    left: 7px;
     position: absolute;
     width: 48px;
     height: 48px;
@@ -145,6 +153,9 @@
     width: 24px;
     height: 24px;
 }
+div.notClicked {
+    z-index: 11;
+}
 div.shareIcon {
     position: relative;
     height: 3rem;
@@ -159,7 +170,7 @@ div.shareIcon {
     border-radius: 1.5rem;
     color: #868E96;
     cursor: pointer;
-    z-index: 7;
+    z-index: 10;
 }
 div.shareIcon svg {
     width: 20px;
@@ -330,6 +341,11 @@ button.disable {
 }
 .seriesHide button svg {
     color: #12B886;
+}
+
+.hoverLSM:hover {
+    color: #212529 !important;
+    border-color: #212529 !important;
 }
 
 /* 메인 컨텐츠 */
