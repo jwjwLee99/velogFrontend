@@ -128,12 +128,12 @@
                                 clip-rule="evenodd" fill="currentColor"></path>
                         </svg>
                     </a>
-                    <button class="newPosting">
+                    <button class="newPosting dpNone">
                         새 글 작성
                     </button>
                     <div>
                         <button class="userLoginBtn">로그인</button>
-                        <div class="userSection">
+                        <div class="userSection dpNone">
                             <img src="https://cdn4.iconfinder.com/data/icons/linecon/512/photo-256.png" alt="user"
                                 srcset="">
                             <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24"
@@ -232,7 +232,9 @@
                 <!-- 우측 메뉴 끝 -->
                 <!-- 시리즈 -->
                 <div class="seriesInfo">
-                    <h2>시리즈 제목</h2>
+                    <h2>
+                        <a href="">시리즈 제목</a>
+                    </h2>
                     <svg width="32" height="48" fill="currentColor" viewBox="0 0 32 48" class="rightTop">
                         <path fill="currentColor" d="M32 0H0v48h.163l16-16L32 47.836V0z"></path>
                     </svg>
@@ -247,20 +249,8 @@
                     </ol>
                     <!-- 목록 보기 or 숨기기 -->
                     <div class="seriesHide">
-                        <!-- 목록 보기 -->
-                        <div class="showSeries dpNone">
-                            <svg class="showAndHide" stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M7 10l5 5 5-5z"></path>
-                            </svg>
-                            목록 보기
-                        </div>
-                        <!-- 목록 숨기기 -->
-                        <div class="hideSeries">
-                            <svg class="showAndHide" stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M7 14l5-5 5 5z"></path>
-                            </svg>
-                            숨기기
-                        </div>
+                        <!-- 목록 보기 & 숨기기-->
+                        <div class="seriesToggle showSeries"></div>
                         <!-- 우측 -->
                         <div class="countList">
                             <div class="seriesNum">1/5</div>

@@ -1,8 +1,8 @@
 $(() => {
+    // 스크롤 메뉴
     let previousScroll = 0;
     let lsm = $(".likeAndShare");
     let rsm = $(".titleList");
-    
     $(window).scroll(function() {
         let currentScroll = $(this).scrollTop();
         let scrollTop = $(window).scrollTop();
@@ -17,14 +17,12 @@ $(() => {
         
     })
 
+    // 좌측 공유 텝
     let sharebtn = $(".shareIcon");
     let facebook = $(".etcbox1");
     let twitter = $(".etcbox2");
     let address = $(".etcbox3");
     let shareTag = $(".shareTag");
-
-    let checked = $(".checked");
-
     sharebtn.click(function() {
         facebook.fadeIn(300).animate({
             top:"-52px",
@@ -37,25 +35,66 @@ $(() => {
             top:"52px",
             left:"65px"
         },300)
-        setTimeout(() => {
-            sharebtn.addClass("checked");
-        }, 500);
+        sharebtn.toggleClass("checked");
+        if(!sharebtn.hasClass("checked")){
+            facebook.animate({
+                top:"0px",
+                left:"8px",
+            },300).fadeOut(300);
+            twitter.animate({
+                left:"8px"
+            }, 300).fadeOut(300);
+            address.animate({
+                top:"0px",
+                left:"8px"
+            },300).fadeOut(300);
+        }
     })
     shareTag.click(function(){
         facebook.animate({
             top:"0px",
             left:"8px",
-        },300).fadeOut(600);
+        },300).fadeOut(300);
         twitter.animate({
             left:"8px"
-        }, 300).fadeOut(600);
+        }, 300).fadeOut(300);
         address.animate({
             top:"0px",
             left:"8px"
-        },300).fadeOut(600);
-        setTimeout(() => {
-            sharebtn.removeClass("checked")
-            sharebtn.addClass("yet")
-        }, 500);
+        },300).fadeOut(300);
+    })
+
+    // 시리즈 보기, 숨기기
+    let toggleBtn = $(".seriesToggle");
+    let hideSeries = $(".hideSeries")
+    let showSeries = $(".showSeries")
+    let ol = $(".seriesInfo ol");
+
+    toggleBtn.html(
+        '<svg class="showAndHide" stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">'+
+        '<path d="M7 10l5 5 5-5z"></path>' +
+        '</svg>'+
+        '목록 보기'
+    )
+
+    toggleBtn.click((e) => {
+        ol.slideDown(100)
+        showSeries.toggleClass("hideSeries")
+        if(toggleBtn.hasClass("hideSeries")){
+            toggleBtn.html(
+                '<svg class="showAndHide" stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">'+
+                '<path d="M7 14l5-5 5 5z"></path>' +
+                '</svg>'+
+                '숨기기'
+            )
+        }else {
+            toggleBtn.html(
+                '<svg class="showAndHide" stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">'+
+                '<path d="M7 10l5 5 5-5z"></path>' +
+                '</svg>'+
+                '목록 보기'
+            )
+            ol.slideUp(100)
+        }
     })
 })
