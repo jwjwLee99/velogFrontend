@@ -84,6 +84,22 @@
     cursor: pointer;
     z-index: 5;
 }
+.likeOn {
+    animation: gelatine 0.5s;
+}
+@keyframes gelatine {
+    from, to { transform: scale(1);}
+    10%{transform: scale(1);}
+    25%{transform: scale(1.2);}
+    50%{transform: scale(1);}
+    75%{transform: scale(1.2);}
+    100%{transform: scale(1);}
+}
+
+.likeOn:hover {
+    background: #20C997 !important;
+    color: #FFFFFF !important;
+}
 #container .titleWrap .leftSideMenu .leftbox .likeAndShare .likeBox svg {
     width: 24px;
     height: 24px;
@@ -378,6 +394,7 @@ button.disable {
 #container .mainContents {
     width: 768px;
     margin: 5rem auto 0px;
+    line-height: 1.5;
 }
 
 
@@ -422,6 +439,10 @@ button.disable {
     text-decoration: none;
     cursor: pointer;
 }
+#container .authorInfo .authorDetail .authorName a:hover {
+    text-decoration: underline;
+    font-weight: bolder;
+}
 #container .authorInfo .authorDetail .authorDesc {
     font-size: 1.125rem;
     line-height: 1.5;
@@ -453,6 +474,21 @@ button.disable {
 }
 .authorEtc a + a {
     margin-left: 1rem;
+}
+.authorEtc a:hover {
+    color: #212529;
+}
+.emailHover {
+    display: none;
+    position: relative;
+    background: #495057;
+    color: #FFFFFF;
+    font-size: 0.875rem;
+    border-radius: 5px;
+    align-items: center;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin-left: 0.5rem;
 }
 
 /* 이전글 다음글 */
@@ -579,6 +615,22 @@ button.disable {
     white-space: nowrap;
     overflow: hidden;
 }
+.beforePost:hover .beforeArrow {
+    animation: moveLeft 0.5s;
+}
+.afterPost:hover .afterArrow {
+    animation: moveRight 0.5s;
+}
+@keyframes moveLeft {
+    from, to {transform: translateX(0px);}
+    50%{transform: translateX(-8px);}
+    100%{transform: translateX(0px);}
+}
+@keyframes moveRight {
+    from, to {transform: translateX(0px);}
+    50%{transform: translate(8px);}
+    100%{transform: translateX(0px);}
+}
 
 
 /* 댓글 */
@@ -631,6 +683,9 @@ button.disable {
     padding: 0px 1.25rem;
     height: 2rem;
     font-size: 1rem;
+}
+.replySubmit button:hover {
+    background: #20C997;
 }
 .replyList {
     margin-top: 2.5rem;
