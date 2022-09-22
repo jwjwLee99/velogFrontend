@@ -146,5 +146,4 @@ $(() => {
         $('.emailHover').css("display", "none")
     })
 
-    
 })
