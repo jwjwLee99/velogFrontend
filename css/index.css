@@ -13,7 +13,7 @@
  }
 
 .main-list {/*여기랑 section css를 헤더 css처럼 만들어서 옆면 고정*/
-    display: flex;
+    display: none;
     margin-top: 2rem;
     width: 90%;
     height: 4rem;
@@ -31,7 +31,7 @@
 }
 
 .post-padding {
-    width: 20rem;
+    width: 19.8rem;
     background: var(--bg-element1);
     border-radius: 4px;
     box-shadow: rgb(0 0 0 / 4%) 0px 4px 16px 0px;
