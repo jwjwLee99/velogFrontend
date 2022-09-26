@@ -5,9 +5,19 @@
  아니면 그냥 태그를 불러올수 있어
  일단 html이랑 css로 기본적인 디자인을 하고, 기능적으로 있는거는 나중에 생각하자
  */
-.main-list {
+
+ .section {/*여기랑 main-list css를 헤더 css처럼 만들어서 옆면 고정*/
+    width: 90%;
+    height: 4rem;
+    margin: 0 auto;
+ }
+
+.main-list {/*여기랑 section css를 헤더 css처럼 만들어서 옆면 고정*/
     display: flex;
     margin-top: 2rem;
+    width: 90%;
+    height: 4rem;
+    margin: 0 auto;
 }
 
 .list-box {
@@ -30,6 +40,11 @@
     overflow: hidden;
     display: flex;
     flex-direction: column;
+}
+
+.img-size { /*여기 클래스 어떻게 사용되는지 알아보기 */
+    width: 100%;
+    position: relative;
 }
 
 .post-img {
@@ -87,4 +102,10 @@
     display: flex;
     -webkit-box-align: center;
     align-items: center;
+}
+
+.likes svg {
+    width: 0.75rem;
+    height: 0.75rem;
+    margin-right: 0.5rem;
 }

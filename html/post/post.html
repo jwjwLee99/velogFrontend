@@ -402,11 +402,11 @@
                 <div class="replyBox">
                     <div class="writeReply">
                         <textarea placeholder="댓글을 입력하세요" class="replyTextarea"></textarea>
-                        <div class="replySubmit">
+                        <div class="replySubmit w802px">
                             <button>댓글 작성</button>
                         </div>
                     </div>
-                    <div class="replyList">
+                    <div class="replyList w802px">
                         <div class="replyBox">
                             <div class="replyElement">
                                 <div class="replyHeader">
@@ -421,6 +421,11 @@
                                             <div class="replyRegdate">등록날짜</div>
                                         </div>
                                     </div>
+                                    <!-- 자신의 댓글일 경우 -->
+                                    <div class="replyAction">
+                                        <span>수정</span>
+                                        <span>삭제</span>
+                                    </div>
                                 </div>
                                 <div class="replyBody">
                                     <div>
@@ -430,32 +435,29 @@
                                     </div>
                                 </div>
                                 <div class="replyToReply">
-                                    <!-- 답글 보기 -->
-                                    <div class="showRtr dpNone">
-                                        <svg width="12" height="12" fill="none" viewBox="0 0 12 12">
-                                            <path fill="currentColor" d="M5.5 2.5h1v3h3v1h-3v3h-1v-3h-3v-1h3v-3z"></path><path fill="currentColor" fill-rule="evenodd" d="M1 0a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V1a1 1 0 0 0-1-1H1zm10 1H1v10h10V1z" clip-rule="evenodd"></path>
-                                        </svg>
-                                        <span>n개의 답글</span>
+                                    <div class="toggleBtn">
+
                                     </div>
                                     <!-- 답글 숨기기 -->
-                                    <div class="hideRtr">
+                                    <div class="hideRtr dpNone">
                                         <svg width="12" height="12" fill="none" viewBox="0 0 12 12">
                                             <path fill="currentColor" d="M9.5 6.5v-1h-7v1h7z"></path>
                                             <path fill="currentColor" fill-rule="evenodd" d="M0 1a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1V1zm1 0h10v10H1V1z" clip-rule="evenodd"></path>
                                         </svg>
                                         <span>숨기기</span>
                                     </div>
-                                    <!-- 답글 달기 -->
-                                    <div class="showRtr dpNone">
-                                        <svg width="12" height="12" fill="none" viewBox="0 0 12 12">
-                                            <path fill="currentColor" d="M5.5 2.5h1v3h3v1h-3v3h-1v-3h-3v-1h3v-3z"></path><path fill="currentColor" fill-rule="evenodd" d="M1 0a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V1a1 1 0 0 0-1-1H1zm10 1H1v10h10V1z" clip-rule="evenodd"></path>
-                                        </svg>
-                                        <span>답글달기</span>
-                                    </div>
                                     <!-- 답글 -->
                                     <div class="rtrSection">
-                                        <div class="rtrSec1"></div>
-                                        <div class="rtrList">
+                                        <!-- 답글 작성 textarea -->
+                                        <div class="rtrTextArea">
+                                            <textarea placeholder="댓글을 작성하세요" class="rtrTA"></textarea>
+                                            <div class="btn-area">
+                                                <button class="closeBtn">취소</button>
+                                                <button class="btnSubmit">댓글 작성</button>
+                                            </div>
+                                        </div>
+                                        <!-- 답글 리스트 -->
+                                        <div class="rtrList dpNone">
                                             <div class="rtrBox">
                                                 <div class="rtrUser">
                                                     <div class="rtrProfile">
@@ -479,6 +481,7 @@
                                                         </div>
                                                     </div>
                                                 </div>
+                                                <!-- 답글에 답글 -->
                                                 <div class="3rdReply"></div>
                                             </div>
                                         </div>
