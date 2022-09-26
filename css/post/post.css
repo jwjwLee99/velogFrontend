@@ -1,3 +1,6 @@
+.w802px{
+    width: 802px !important;
+}
 #root{
     z-index: -1000;
 }
@@ -689,10 +692,15 @@ button.disable {
 }
 .replyList {
     margin-top: 2.5rem;
+    width: 100%;
+}
+.replyBox{
+    width: 100%;
 }
 .replyElement {
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
+    width: 100%;
 }
 .replyElement .replyHeader {
     margin-bottom: 1.5rem;
@@ -750,11 +758,25 @@ button.disable {
     word-break: keep-all;
     overflow-wrap: break-word;
 }
+.replyAction {
+    font-size: 0.875rem;
+    color: #868E96;
+}
+.replyAction span {
+    cursor: pointer;
+
+}
+.replyAction span:hover {
+    text-decoration: underline;
+}
 /* 대댓글 */
 .replyToReply {
     margin-top: 2rem;
 }
-.replyToReply .showRtr {
+.replyToReply .toggleBtn {
+    width: 100%;
+}
+.showRtr {
     display: inline-flex;
     -webkit-box-align: center;
     align-items: center;
@@ -762,10 +784,21 @@ button.disable {
     font-weight: bold;
     cursor: pointer;
 }
-.replyToReply .showRtr svg {
+.writeRtr {
+    display: inline-flex;
+    -webkit-box-align: center;
+    align-items: center;
+    color: #12B886;
+    font-weight: bold;
+    cursor: pointer;
+}
+.writeRtr svg {
     margin-right: 0.5rem;
 }
-.replyToReply .hideRtr {
+.showRtr svg {
+    margin-right: 0.5rem;
+}
+.hideRtr {
     display: inline-flex;
     -webkit-box-align: center;
     align-items: center;
@@ -773,11 +806,12 @@ button.disable {
     font-weight: bold;
     cursor: pointer;
 }
-.replyToReply .hideRtr svg {
+.hideRtr svg {
     margin-right: 0.5rem;
 }
 /* 답글 */
 .rtrSection {
+    display: none;
     border: 1px solid rgba(0, 0, 0, 0.02);
     background-color: rgba(0, 0, 0, 0.016);
     padding: 1.5rem;
@@ -848,8 +882,57 @@ button.disable {
 .replyBox + .replyBox {
     border-top: 1px solid #F1F3F5;
 }
-
-
+.rtrTextArea {
+    width: 100%;
+}
+.rtrTextArea > textarea {
+    resize: none;
+    padding: 1rem 1rem 1.5rem;
+    outline: none;
+    border: 1px solid #F1F3F5;
+    margin-bottom: 1.5rem;
+    width: 95%;
+    border-radius: 4px;
+    font-size: 1rem;
+    color: #212529;
+    line-height: 1.75;
+    background: #FFFFFF;
+}
+.rtrTextArea .btn-area {
+    display: flex;
+    -webkit-box-pack: end;
+    justify-content: flex-end;
+}
+.rtrTextArea .btn-area button {
+    display: inline-flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    font-weight: bold;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    background: none;
+    color: #12B886;
+    border-radius: 4px;
+    padding: 0px 1.25rem;
+    height: 2rem;
+    font-size: 1rem;
+}
+.rtrTextArea .btn-area .closeBtn{
+    margin-right: 1rem;
+}
+.rtrTextArea .btn-area .closeBtn:hover {
+    background: #E9ECEF;
+}
+.rtrTextArea .btn-area .btnSubmit {
+    background: #12B886;
+    color: white;
+}
+.rtrTextArea .btn-area .btnSubmit:hover{
+    background: #20C997;
+}
 
 /* 관심글 추천 */
 .interestingWrap {

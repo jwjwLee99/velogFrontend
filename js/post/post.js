@@ -146,4 +146,44 @@ $(() => {
         $('.emailHover').css("display", "none")
     })
 
+
+    // *댓글 - 답글
+    let rtrCnt = 0; // db로 갯수 불러오기
+    let writeRtr = $(".writeRtr")
+    let hideRtr = $(".hideRtr")
+    let showRtr = $(".showRtr")
+
+    // 댓글 없을 때
+    if(rtrCnt <= 0){
+        $(".toggleBtn").html(
+            '<div class="writeRtr">'
+            + '<svg width="12" height="12" fill="none" viewBox="0 0 12 12">'
+            + '<path fill="currentColor" d="M5.5 2.5h1v3h3v1h-3v3h-1v-3h-3v-1h3v-3z"></path><path fill="currentColor" fill-rule="evenodd" d="M1 0a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V1a1 1 0 0 0-1-1H1zm10 1H1v10h10V1z" clip-rule="evenodd"></path>'
+            + '</svg>'
+            + '<span>답글달기</span>'
+            + '</div>'
+        )
+        writeRtr.click(() => {
+            $(".rtrSection").slideDown(1000)
+            $(".rtrSection").html(
+                '<div class="rtrTextArea">'
+                + '<textarea placeholder="댓글을 작성하세요" class="rtrTA"></textarea>'
+                + '<div class="btn-area">'
+                + '<button class="closeBtn">취소</button>'
+                + '<button class="btnSubmit">댓글 작성</button>'
+                + '</div>'
+                + '</div>'
+            )
+        })
+    }else { // 댓글이 있을 때
+        $(".toggleBtn").html(
+            '<div class="showRtr">'
+            + '<svg width="12" height="12" fill="none" viewBox="0 0 12 12">'
+            + '<path fill="currentColor" d="M5.5 2.5h1v3h3v1h-3v3h-1v-3h-3v-1h3v-3z"></path><path fill="currentColor" fill-rule="evenodd" d="M1 0a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V1a1 1 0 0 0-1-1H1zm10 1H1v10h10V1z" clip-rule="evenodd"></path>'
+            + '</svg>'
+            + '<span>n개의 답글</span>'
+            + '</div>'
+        )
+    }
+
 })
