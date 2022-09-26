@@ -163,6 +163,7 @@ nav a.search > svg {
 
 /* 새 글 작성 로그인 완료 후에만 display : block */
 nav button.newPosting {
+    display: none;
     margin-right: 1.25rem;
     height: 2rem;
     padding-left: 1rem;
@@ -207,7 +208,7 @@ nav button.userLoginBtn{
 /* login 후 */
 nav div div.userSection{
     cursor: pointer;
-    display: flex;
+    display: none;
     -webkit-box-align: center;
     align-items: center;
 }

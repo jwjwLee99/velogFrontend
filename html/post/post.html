@@ -407,6 +407,7 @@
                         </div>
                     </div>
                     <div class="replyList w802px">
+                        <!-- 답글 for문 -->
                         <div class="replyBox">
                             <div class="replyElement">
                                 <div class="replyHeader">
@@ -423,8 +424,8 @@
                                     </div>
                                     <!-- 자신의 댓글일 경우 -->
                                     <div class="replyAction">
-                                        <span>수정</span>
-                                        <span>삭제</span>
+                                        <a class="replyUpdateBtn">수정</a>
+                                        <a class="replyDel">삭제</a>
                                     </div>
                                 </div>
                                 <div class="replyBody">
@@ -433,10 +434,16 @@
                                             <p>댓글 내용</p>
                                         </div>
                                     </div>
+                                    <div class="replyUpdate dpNone">
+                                        <textarea></textarea>
+                                        <div class="btnWrap">
+                                            <button class="upcancel">취소</button>
+                                            <button class="upSubmit">댓글 수정</button>
+                                        </div>
+                                    </div>
                                 </div>
                                 <div class="replyToReply">
                                     <div class="toggleBtn">
-
                                     </div>
                                     <!-- 답글 숨기기 -->
                                     <div class="hideRtr dpNone">
@@ -482,85 +489,6 @@
                                                     </div>
                                                 </div>
                                                 <!-- 답글에 답글 -->
-                                                <div class="3rdReply"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="replyBox">
-                            <div class="replyElement">
-                                <div class="replyHeader">
-                                    <div class="replyProfile">
-                                        <a href="">
-                                            <img src="https://velog.velcdn.com/images/hax0r/profile/99769383-72dc-4466-a903-a88262da6636/P20200124_201720582_F0849C4C-632A-4189-942B-0ED41F0C6A5F.JPG" alt="댓글 프로필">
-                                        </a>
-                                        <div class="replyInfo">
-                                            <div class="replyName">
-                                                <a href="">김아무개</a>
-                                            </div>
-                                            <div class="replyRegdate">등록날짜</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="replyBody">
-                                    <div>
-                                        <div class="replyDesc">
-                                            <p>댓글 내용</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="replyToReply">
-                                    <!-- 답글 보기 -->
-                                    <div class="showRtr dpNone">
-                                        <svg width="12" height="12" fill="none" viewBox="0 0 12 12">
-                                            <path fill="currentColor" d="M5.5 2.5h1v3h3v1h-3v3h-1v-3h-3v-1h3v-3z"></path><path fill="currentColor" fill-rule="evenodd" d="M1 0a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V1a1 1 0 0 0-1-1H1zm10 1H1v10h10V1z" clip-rule="evenodd"></path>
-                                        </svg>
-                                        <span>n개의 답글</span>
-                                    </div>
-                                    <!-- 답글 숨기기 -->
-                                    <div class="hideRtr">
-                                        <svg width="12" height="12" fill="none" viewBox="0 0 12 12">
-                                            <path fill="currentColor" d="M9.5 6.5v-1h-7v1h7z"></path>
-                                            <path fill="currentColor" fill-rule="evenodd" d="M0 1a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1V1zm1 0h10v10H1V1z" clip-rule="evenodd"></path>
-                                        </svg>
-                                        <span>숨기기</span>
-                                    </div>
-                                    <!-- 답글 달기 -->
-                                    <div class="showRtr dpNone">
-                                        <svg width="12" height="12" fill="none" viewBox="0 0 12 12">
-                                            <path fill="currentColor" d="M5.5 2.5h1v3h3v1h-3v3h-1v-3h-3v-1h3v-3z"></path><path fill="currentColor" fill-rule="evenodd" d="M1 0a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V1a1 1 0 0 0-1-1H1zm10 1H1v10h10V1z" clip-rule="evenodd"></path>
-                                        </svg>
-                                        <span>답글달기</span>
-                                    </div>
-                                    <!-- 답글 -->
-                                    <div class="rtrSection">
-                                        <div class="rtrSec1"></div>
-                                        <div class="rtrList">
-                                            <div class="rtrBox">
-                                                <div class="rtrUser">
-                                                    <div class="rtrProfile">
-                                                        <a href="">
-                                                            <img src="https://velog.velcdn.com/images/woo0_hooo/profile/8b0a121b-7ef2-43ad-a221-1866b19615ba/FCA5DD5A-050E-4381-AA18-D4A4534EE1FD-12868-000005C908BB3506.JPG" alt="답글프로필">
-                                                        </a>
-                                                        <div class="rtrInfo">
-                                                            <div class="rtrName">
-                                                                <a href="">답글사용자이름</a>
-                                                            </div>
-                                                            <div class="rtrRegdate">답글등록날짜</div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="rtrDesc">
-                                                    <div>
-                                                        <div class="rtrText">
-                                                            <div>
-                                                                <p>답글 내용</p>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
                                                 <div class="3rdReply"></div>
                                             </div>
                                         </div>
@@ -715,6 +643,23 @@
         </footer>
         <!-- footer 끝 -->
     </div>
+    <!-- modal -->
+    <div class="modal">
+        <!-- 댓글 삭제 모달 -->
+        <div class="replyRemove">
+            <div class="rrModalContents">
+                <div class="modalMain">
+                    <h3>댓글 삭제</h3>
+                    <div class="message">댓글을 정말로 삭제하시겠습니까?</div>
+                    <div class="modalBtnArea">
+                        <button class="btncss delcancel">취소</button>
+                        <button class="btncss delsubmit">확인</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- model end -->
 </body>
 
 </html>

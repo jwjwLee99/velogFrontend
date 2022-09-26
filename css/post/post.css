@@ -710,6 +710,54 @@ button.disable {
     -webkit-box-align: center;
     align-items: center;
 }
+.replyUpdate textarea{
+    height: 70px;
+    resize: none;
+    padding: 1rem 1rem 1.5rem;
+    outline: none;
+    border: 1px solid #F1F3F5;
+    margin-bottom: 1.5rem;
+    width: 96%;
+    border-radius: 4px;
+    min-height: 6.125rem;
+    font-size: 1rem;
+    color: #212529;
+    line-height: 1.75;
+    background: #FFFFFF;
+}
+.btnWrap {
+    display: flex;
+    -webkit-box-pack: end;
+    justify-content: flex-end;
+}
+.btnWrap button {
+    display: inline-flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    font-weight: bold;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    background: none;
+    color: #12B886;
+    border-radius: 4px;
+    padding: 0px 1.25rem;
+    height: 2rem;
+    font-size: 1rem;
+}
+.btnWrap button:first-child:hover {
+    background: #E9ECEF;
+}
+.btnWrap button:last-child {
+    background: #12B886;
+    color: white;
+    margin-left: 1.25rem;
+}
+.btnWrap button:last-child:hover {
+    background: #20C997;
+}
 .replyElement .replyHeader .replyProfile {
     display: flex;
     -webkit-box-align: center;
@@ -1059,4 +1107,90 @@ footer a img {
     display: block;
     width: 150px;
     height: auto;
+}
+
+/* modal */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    background-color: rgba(249,249,249,0.85);
+    overflow: hidden;
+}
+.replyRemove {
+    display: none;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 60;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+}
+.rrModalContents {
+    width: 25rem;
+    border-radius: 4px;
+    background: #FFFFFF;
+    padding: 2rem 1.5rem;
+    box-shadow: rgb(0 0 0 / 9%) 0px 2px 12px 0px;
+}
+.modalMain h3 {
+    margin: 0px;
+    font-size: 1.5rem;
+    color: #212529;
+    line-height: 1.5;
+    font-weight: bold;
+}
+.modalMain div.message {
+    line-height: 1.5;
+    font-size: 1rem;
+    color: #495057;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    white-space: pre-wrap;
+}
+.btncss {
+    display: inline-flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    font-weight: bold;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    background: none;
+    color: #12B886;
+    border-radius: 4px;
+    padding: 0px 1.25rem;
+    height: 2rem;
+    font-size: 1rem;
+}
+.modalBtnArea {
+    margin-top: 2rem;
+    display: flex;
+    -webkit-box-pack: end;
+    justify-content: flex-end;
+}
+.delcancel{
+    background: transparent;
+    margin-right: 1.25rem;
+}
+.delcancel:hover{
+    background: #E9ECEF;
+}
+.delsubmit{
+    background: #12B886 ;
+    color: #FFFFFF;
+}
+.delsubmit:hover{
+    background: #20C997;
 }
