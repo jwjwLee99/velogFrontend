@@ -164,16 +164,7 @@ $(() => {
             + '</div>'
         )
         writeRtr.click(() => {
-            $(".rtrSection").slideDown(1000)
-            $(".rtrSection").html(
-                '<div class="rtrTextArea">'
-                + '<textarea placeholder="댓글을 작성하세요" class="rtrTA"></textarea>'
-                + '<div class="btn-area">'
-                + '<button class="closeBtn">취소</button>'
-                + '<button class="btnSubmit">댓글 작성</button>'
-                + '</div>'
-                + '</div>'
-            )
+            $(".rtrTextArea").css("display", "block")
         })
     }else { // 댓글이 있을 때
         $(".toggleBtn").html(
@@ -186,4 +177,29 @@ $(() => {
         )
     }
 
+    // 댓글 수정
+    $(".replyUpdateBtn").click(()=> {
+        $(".replyBody > div").addClass("dpNone")
+        $(".replyUpdate").removeClass("dpNone")
+        $(".replyUpdateBtn").addClass("dpNone")
+    })
+    // 댓글 수정 취소
+    $(".upcancel").click(()=> {
+        $(".replyBody > div").removeClass("dpNone")
+        $(".replyUpdate").addClass("dpNone")
+        $(".replyUpdateBtn").removeClass("dpNone")
+    })
+    // 댓글 수정 완료
+    
+
+    // 댓글 삭제
+    $(".replyDel").click(()=> {
+        $(".modal").fadeIn(100)
+        $(".replyRemove").fadeIn(100)
+    })
+    $(".delcancel").click(()=> {
+        $(".modal").fadeOut(100)
+        $(".replyRemove").fadeOut(100)
+    })
+    // 삭제 확인
 })
