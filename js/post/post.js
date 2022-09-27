@@ -147,35 +147,60 @@ $(() => {
     })
 
 
-    // *댓글 - 답글
-    let rtrCnt = 0; // db로 갯수 불러오기
+    /*************
+     * ***
+     * 댓글 
+     * 답글
+     * 할거 ㅈㄴ 많음
+    */
+    let rtrCnt = 1; // db로 답글 갯수 불러오기
     let writeRtr = $(".writeRtr")
     let hideRtr = $(".hideRtr")
     let showRtr = $(".showRtr")
 
     // 댓글 없을 때
     if(rtrCnt <= 0){
-        $(".toggleBtn").html(
-            '<div class="writeRtr">'
-            + '<svg width="12" height="12" fill="none" viewBox="0 0 12 12">'
-            + '<path fill="currentColor" d="M5.5 2.5h1v3h3v1h-3v3h-1v-3h-3v-1h3v-3z"></path><path fill="currentColor" fill-rule="evenodd" d="M1 0a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V1a1 1 0 0 0-1-1H1zm10 1H1v10h10V1z" clip-rule="evenodd"></path>'
-            + '</svg>'
-            + '<span>답글달기</span>'
-            + '</div>'
-        )
-        writeRtr.click(() => {
-            $(".rtrTextArea").css("display", "block")
-        })
+        hideRtr.addClass("dpNone");
+        showRtr.addClass("dpNone");
+        $(".rtrSection").addClass("dpNone")
+        $(".rtInBtn").addClass("dpNone")
     }else { // 댓글이 있을 때
-        $(".toggleBtn").html(
-            '<div class="showRtr">'
-            + '<svg width="12" height="12" fill="none" viewBox="0 0 12 12">'
-            + '<path fill="currentColor" d="M5.5 2.5h1v3h3v1h-3v3h-1v-3h-3v-1h3v-3z"></path><path fill="currentColor" fill-rule="evenodd" d="M1 0a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V1a1 1 0 0 0-1-1H1zm10 1H1v10h10V1z" clip-rule="evenodd"></path>'
-            + '</svg>'
-            + '<span>n개의 답글</span>'
-            + '</div>'
-        )
+        hideRtr.addClass("dpNone");
+        writeRtr.addClass("dpNone");
+        $(".rtrSection").addClass("dpNone")
+        $(".rtrTextArea").addClass("dpNone");
     }
+    // 답글 보기
+    showRtr.click(() => {
+        showRtr.addClass("dpNone")
+        $(".rtrSection").removeClass("dpNone")
+        $(".rtrSection").slideDown(100)
+        hideRtr.removeClass("dpNone")
+        $(".rtrTextArea").addClass("dpNone")
+    })
+    // 답글쓰기 클릭
+    writeRtr.click(() => {
+        writeRtr.addClass("dpNone")
+        $(".rtrSection").removeClass("dpNone")
+        $(".rtrSection").slideDown(100)
+        hideRtr.removeClass("dpNone")
+        $(".rtrTextArea").removeClass("dpNone")
+    })
+    // 숨기기 클릭
+    hideRtr.click(()=> {
+        writeRtr.removeClass("dpNone")
+        $(".rtrSection").slideUp(100)
+        $(".rtrSection").addClass("dpNone")
+        hideRtr.addClass("dpNone")
+        $(".rtrTextArea").addClass("dpNone")
+    })
+    // 답글쓰기 취소
+    $(".closeBtn").click(() => {
+        writeRtr.removeClass("dpNone")
+        $(".rtrSection").slideUp(100)
+        $(".rtrSection").addClass("dpNone")
+        hideRtr.addClass("dpNone")
+    })
 
     // 댓글 수정
     $(".replyUpdateBtn").click(()=> {

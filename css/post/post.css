@@ -199,6 +199,7 @@ div.shareIcon svg {
 #container .titleWrap .rightSideMenu {
     position: relative;
     margin-top: 2rem;
+    user-select: none;
 }
 #container .titleWrap .rightSideMenu .listBox {
     position: absolute;
@@ -501,7 +502,8 @@ button.disable {
     display: flex;
     width: 768px;
     margin-left: auto;
-    margin-right: auto;   
+    margin-right: auto;  
+    user-select: none; 
 }
 .beforeAfter .beforePost {
     min-width: 0px;
@@ -686,6 +688,7 @@ button.disable {
     padding: 0px 1.25rem;
     height: 2rem;
     font-size: 1rem;
+    user-select: none;
 }
 .replySubmit button:hover {
     background: #20C997;
@@ -746,6 +749,7 @@ button.disable {
     padding: 0px 1.25rem;
     height: 2rem;
     font-size: 1rem;
+    user-select: none;
 }
 .btnWrap button:first-child:hover {
     background: #E9ECEF;
@@ -821,45 +825,23 @@ button.disable {
 .replyToReply {
     margin-top: 2rem;
 }
-.replyToReply .toggleBtn {
-    width: 100%;
-}
-.showRtr {
+.rtrTogglBtn{
     display: inline-flex;
     -webkit-box-align: center;
     align-items: center;
-    color: #12B886;
+    color: #12B886 !important;
     font-weight: bold;
     cursor: pointer;
+    user-select: none;
 }
-.writeRtr {
-    display: inline-flex;
-    -webkit-box-align: center;
-    align-items: center;
-    color: #12B886;
-    font-weight: bold;
-    cursor: pointer;
-}
-.writeRtr svg {
+.rtrTogglBtn svg {
     margin-right: 0.5rem;
-}
-.showRtr svg {
-    margin-right: 0.5rem;
-}
-.hideRtr {
-    display: inline-flex;
-    -webkit-box-align: center;
-    align-items: center;
-    color: #12B886;
-    font-weight: bold;
-    cursor: pointer;
 }
 .hideRtr svg {
     margin-right: 0.5rem;
 }
 /* 답글 */
 .rtrSection {
-    display: none;
     border: 1px solid rgba(0, 0, 0, 0.02);
     background-color: rgba(0, 0, 0, 0.016);
     padding: 1.5rem;
@@ -918,6 +900,37 @@ button.disable {
     letter-spacing: keep-all;
     overflow-wrap: break-word;
 }
+.rtrSection .rtrList .rtrBox .rtrText2 {
+    margin-top: 2rem;
+    color: #212529;
+}
+.rtrSection .rtrList .empty {
+    width: 100%;
+    height: 1px;
+    background: #E9ECEF;
+    margin-bottom: 1.5rem;
+}
+.rtrSection .rtrList .rtInBtn {
+    cursor: pointer;
+    height: 2.5rem;
+    font-size: 1rem;
+    border-radius: 4px;
+    border: 1px solid #12B886;
+    display: flex;
+    outline: none;
+    width: 98.5%;
+    -webkit-box-align: center;
+    align-items: center;
+    justify-content: center;
+    -webkit-box-pack: center;
+    font-weight: 600;
+    color: #12B886;
+    background: #FFFFFF;
+}
+.rtrSection .rtrList .rtInBtn:hover {
+    background: #12B886;
+    color: #FFFFFF;
+}
 .rtrText {
     font-size: 1.125rem;
     color: #212529;
@@ -941,6 +954,28 @@ button.disable {
     margin-bottom: 1.5rem;
     width: 95%;
     border-radius: 4px;
+    font-size: 1rem;
+    color: #212529;
+    line-height: 1.75;
+    background: #FFFFFF;
+}
+.textarea2 {
+    border: 1px solid rgba(0, 0, 0, 0.02);
+    background-color: rgba(0, 0, 0, 0.016);
+    padding: 1.5rem;
+    border-radius: 4px;
+    margin-top: 1.3125rem;
+}
+.textarea2 textarea {
+    height: 70px;
+    resize: none;
+    padding: 1rem 1rem 1.5rem;
+    outline: none;
+    border: 1px solid #F1F3F5;
+    margin-bottom: 1.5rem;
+    width: 96%;
+    border-radius: 4px;
+    min-height: 6.125rem;
     font-size: 1rem;
     color: #212529;
     line-height: 1.75;
