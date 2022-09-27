@@ -6,14 +6,14 @@
  일단 html이랑 css로 기본적인 디자인을 하고, 기능적으로 있는거는 나중에 생각하자
  */
 
- .section {/*여기랑 main-list css를 헤더 css처럼 만들어서 옆면 고정*/
+ .section {
     width: 90%;
     height: 4rem;
     margin: 0 auto;
  }
 
-.main-list {/*여기랑 section css를 헤더 css처럼 만들어서 옆면 고정*/
-    display: none;
+.main-list {
+    display: flex;
     margin-top: 2rem;
     width: 90%;
     height: 4rem;
@@ -108,4 +108,12 @@
     width: 0.75rem;
     height: 0.75rem;
     margin-right: 0.5rem;
+}
+/* 이것도 flex 이지?ㅇㅇ */
+.main-list2 {
+    display: none;
+    margin-top: 2rem;
+    width: 90%;
+    height: 4rem;
+    margin: 0 auto;
 }
