@@ -2,29 +2,29 @@ a {
     color: #12B886;
     text-decoration: none;
 }
-.dWETBP {
+.page {
     position: fixed;
     top: 0px;
     left: 0px;
     width: 100%;
     height: 100%;
-    display: flex;
+    display: none;
     -webkit-box-align: center;
     align-items: center;
     -webkit-box-pack: center;
     justify-content: center;
     z-index: 20;
 }
-.dWETBP .wrapper {
+.page .loginpage {
     width: 606px;
     height: 530px;
     animation: 0.4s ease-in-out 0s 1 normal forwards running cptskd;
     box-shadow: rgb(0 0 0 / 9%) 0px 2px 12px 0px;
     display: flex;
 }
-.dWETBP .wrapper .gray-block {
+.page .loginpage .gray-block {
     width: 216px;
-    background: var(--bg-element2);
+    background: #F8F9FA;
     padding: 1.5rem;
     display: flex;
     flex-direction: column;
@@ -33,12 +33,12 @@ a {
     -webkit-box-align: center;
     align-items: center;
 }
-.dWETBP .wrapper .gray-block img {
+.page .loginpage .gray-block img {
     width: 100%;
     height: auto;
     display: block;
 }
-.dWETBP .wrapper .gray-block .welcome {
+.page .loginpage .gray-block .welcome {
     font-size: 1.75rem;
     margin-top: 1.5rem;
     color: #495057;
@@ -46,14 +46,14 @@ a {
     font-weight: 600;
 }
 
-.dWETBP .wrapper .white-block {
+.page .loginpage .white-block {
     flex: 1 1 0%;
     background: #FFFFFF;
     padding: 1.5rem;
     display: flex;
     flex-direction: column;
 }
-.dWETBP .wrapper .white-block .exit-wrapper {
+.page .loginpage .white-block .exit-loginpage {
     display: flex;
     -webkit-box-pack: end;
     justify-content: flex-end;
@@ -61,12 +61,12 @@ a {
     color: #868E96;
     margin-bottom: 2.25rem;
 }
-.dWETBP .wrapper .white-block .block-content {
+.page .loginpage .white-block .block-login {
     flex: 1 1 0%;
     display: flex;
     flex-direction: column;
 }
-.JnHrt {
+.content-login {
     display: flex;
     flex: 1 1 0%;
     flex-direction: column;
@@ -74,7 +74,7 @@ a {
     justify-content: space-between;
     line-height: 1.5;
 }
-.JnHrt h2 {
+.content-login h2 {
     font-size: 1.3125rem;
     color: #212529;
 }
@@ -87,12 +87,12 @@ h2 {
     margin-inline-end: 0px;
     font-weight: bold;
 }
-.JnHrt h4 {
+.content-login h4 {
     margin-top: 1rem;
     margin-bottom: 1rem;
     color: #868E96;
 }
-.swztF {
+.pwid {
     width: 100%;
     height: 3rem;
 
@@ -101,7 +101,7 @@ h2 {
     display: flex;
     justify-content: space-between;
 }
-.swztF input {
+.pwid input {
     display: block;
     border-radius: 2px;
     font-size: 1rem;
@@ -112,17 +112,12 @@ h2 {
     border: none;
     box-shadow: rgb(0 0 0 / 9%) 1px 1px 1px 1px;
     margin-bottom: 0.2rem;
+    appearance: none;
+    outline: none;
 }
-.swztF1 input {
-    display: block;
-    border-radius: 2px;
-    font-size: 1rem;
-    color: #000000;
-    flex: 1 1 0%;
-    padding: 1rem;
-    background: #FFFFFF;
-    box-shadow: rgb(0 0 0 / 9%) 1px 1px 1px 1px;
-    border: none;
+.pwid input:focus {
+    appearance: none;
+    outline: 2px solid #12B886;
 }
 button.loginSubmit {
     position: relative;
@@ -140,12 +135,12 @@ button.loginSubmit {
     cursor: pointer;
     height: 6.6rem;
 }
-.jNMyjf {
+.sosciallogin {
     display: flex;
     justify-content: space-around;
     margin-top: 1.5rem;
 }
-.bSWsvS {
+.git {
     width: 3rem;
     height: 3rem;
     border-radius: 1.5rem;
@@ -158,7 +153,7 @@ button.loginSubmit {
     transition: all 0.125s ease-in 0s;
     color: white;
 }
-.ihJtSI {
+.google {
     width: 3rem;
     height: 3rem;
     border-radius: 1.5rem;
@@ -172,7 +167,7 @@ button.loginSubmit {
     color: white;
     border: 1px solid #DEE2E6;
 }
-.bSWsvS {
+.facebook {
     width: 3rem;
     height: 3rem;
     border-radius: 1.5rem;
@@ -185,18 +180,409 @@ button.loginSubmit {
     transition: all 0.125s ease-in 0s;
     color: white;
 }
-.JnHrt .foot span {
+.content-login .foot span {
     margin-right: 0.25rem;
 }
-.JnHrt .foot {
+.content-login .foot {
     text-align: right;
 }
-.JnHrt .foot .link {
+.content-login .foot .link {
     display: inline-block;
     font-weight: bold;
     color: #12B886;
     cursor: pointer;
 }
+
+b {
+    color: #12B886;
+    text-decoration: none;
+}
+.account {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    display: none;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    z-index: 20;
+}
+.account .accountpage {
+    width: 606px;
+    height: 530px;
+    animation: 0.4s ease-in-out 0s 1 normal forwards running cptskd;
+    box-shadow: rgb(0 0 0 / 9%) 0px 2px 12px 0px;
+    display: flex;
+}
+.account .accountpage .white-block {
+    flex: 1 1 0%;
+    background: #FFFFFF;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+}
+.account .accountpage .white-block .exit-accountpage {
+    display: flex;
+    -webkit-box-pack: end;
+    justify-content: flex-end;
+    font-size: 1.5rem;
+    color: #868E96;
+    margin-bottom: 2.25rem;
+}
+.account .accountpage .white-block .block-accountpage {
+    flex: 1 1 0%;
+    display: flex;
+    flex-direction: column;
+}
+.content-accountpage {
+    display: flex;
+    flex: 1 1 0%;
+    flex-direction: column;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    line-height: 1.5;
+}
+.content-accountpage h2 {
+    font-size: 1.3125rem;
+    color: #212529;
+}
+h2 {
+    display: block;
+    font-size: 1.5em;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+.content-accountpage h4 {
+    margin-top: 5rem;
+    margin-bottom: 1rem;
+    color: #868E96;
+}
+.creataccount {
+    width: 100%;
+    height: 0.5rem;
+}
+.accountSection {
+    display: flex;
+    justify-content: space-between;
+}
+.creataccount input {
+    display: block;
+    border-radius: 2px;
+    font-size: 1rem;
+    color: #000000;
+    flex: 1 1 0%;
+    padding: 0.1rem;
+    background: #ffffff;
+    border: none;
+    box-shadow: rgb(0 0 0 / 9%) 1px 1px 1px 1px;
+    margin-bottom: 0.2rem;
+    appearance: none;
+    outline: none;
+}
+.pn input {
+    display: inline;
+}
+.creataccount input:focus {
+    appearance: none;
+    outline: 2px solid #12B886;
+}
+button.accountSubmit {
+    position: relative;
+    right: 10px;
+    background: #12B886;
+    color: #FFFFFF;
+    font-size: 1rem;
+    font-weight: bold;
+    outline: none;
+    border: none;
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+    width: 10.2rem;
+    word-break: keep-all;
+    cursor: pointer;
+    height: 10.6rem;
+}
+
+.content-accountpage .alink {
+    text-align: right;
+    display: inline-block;
+    font-weight: bold;
+    color: #12B886;
+    cursor: pointer;
+}
+
+.search {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    display: none;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    z-index: 20;
+}
+.search .searchpage {
+    width: 606px;
+    height: 530px;
+    animation: 0.4s ease-in-out 0s 1 normal forwards running cptskd;
+    box-shadow: rgb(0 0 0 / 9%) 0px 2px 12px 0px;
+    display: flex;
+}
+.search .searchpage .white-block {
+    flex: 1 1 0%;
+    background: #FFFFFF;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+}
+.search .searchpage .white-block .exit-searchpage {
+    display: flex;
+    -webkit-box-pack: end;
+    justify-content: flex-end;
+    font-size: 1.5rem;
+    color: #868E96;
+    margin-bottom: 0.25rem;
+}
+.content-searchpage {
+    display: flex;
+    flex: 1 1 0%;
+    flex-direction: column;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    line-height: 1.5;
+}
+.content-searchpage h2 {
+    font-size: 1.5rem;
+    color: #212529;
+}
+h2 {
+    display: block;
+    font-size: 1.5em;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: 900;
+}
+.find-name input {
+    border-radius: 2px;
+    color: #000000;
+    flex: 1 1 0%;
+    padding: 0.1rem;
+    background: #ffffff;
+    border: none;
+    box-shadow: rgb(0 0 0 / 9%) 1px 1px 1px 1px;
+    margin-bottom: 0.2rem;
+    appearance: none;
+    outline: none;
+}
+.find-name input:focus {
+    appearance: none;
+    outline: 2px solid #12B886;
+}
+.find-name {
+    line-height: 4rem;
+    font-size: 1.4rem;
+    position: absolute;
+    left:50%;
+    transform:translateX(-50%);
+    margin-bottom: 1rem;
+    bottom: 450px;
+}
+button.enter {
+    position: relative;
+    right: 10px;
+    background: #12B886;
+    color: #FFFFFF;
+    font-size: 1rem;
+    font-weight: bold;
+    outline: none;
+    border: none;
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+    width: 10.2rem;
+    word-break: keep-all;
+    cursor: pointer;
+    height: 3rem;
+    margin-right: 2px;
+}
+button.cancle {
+    position: relative;
+    right: 10px;
+    background: #12B886;
+    color: #FFFFFF;
+    font-size: 1rem;
+    font-weight: bold;
+    outline: none;
+    border: none;
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+    width: 10.2rem;
+    word-break: keep-all;
+    cursor: pointer;
+    height: 3rem;
+}
+.findsubmit {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    bottom: -220px;
+}
+.clink a{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    bottom: -240px;
+    text-align: right;
+    color: #12B886;
+}
+.name , .pnum {
+    font-weight: 550;
+}
+
+.findpw {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    z-index: 20;
+}
+.findpw .findpwpage {
+    width: 606px;
+    height: 530px;
+    animation: 0.4s ease-in-out 0s 1 normal forwards running cptskd;
+    box-shadow: rgb(0 0 0 / 9%) 0px 2px 12px 0px;
+    display: flex;
+}
+.findpw .findpwpage .white-block {
+    flex: 1 1 0%;
+    background: #FFFFFF;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+}
+.findpw .findpwpage .white-block .exit-findpwpage {
+    display: flex;
+    -webkit-box-pack: end;
+    justify-content: flex-end;
+    font-size: 1.5rem;
+    color: #868E96;
+    margin-bottom: 0.25rem;
+}
+.content-findpwpage {
+    display: flex;
+    flex: 1 1 0%;
+    flex-direction: column;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    line-height: 1.5;
+}
+.content-findpwpage h2 {
+    font-size: 1.5rem;
+    color: #212529;
+}
+h2 {
+    display: block;
+    font-size: 1.5em;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: 900;
+}
+.find-pw input {
+    border-radius: 2px;
+    color: #000000;
+    flex: 1 1 0%;
+    padding: 0.1rem;
+    background: #ffffff;
+    border: none;
+    box-shadow: rgb(0 0 0 / 9%) 1px 1px 1px 1px;
+    margin-bottom: 0.2rem;
+    appearance: none;
+    outline: none;
+}
+.find-pw input:focus {
+    appearance: none;
+    outline: 2px solid #12B886;
+}
+.find-pw {
+    line-height: 4rem;
+    font-size: 1.4rem;
+    position: absolute;
+    left:50%;
+    transform:translateX(-50%);
+    margin-bottom: 1rem;
+    bottom: 450px;
+}
+button.pwenter {
+    position: relative;
+    right: 10px;
+    background: #12B886;
+    color: #FFFFFF;
+    font-size: 1rem;
+    font-weight: bold;
+    outline: none;
+    border: none;
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+    width: 10.2rem;
+    word-break: keep-all;
+    cursor: pointer;
+    height: 3rem;
+    margin-right: 2px;
+}
+button.pwcancle {
+    position: relative;
+    right: 10px;
+    background: #12B886;
+    color: #FFFFFF;
+    font-size: 1rem;
+    font-weight: bold;
+    outline: none;
+    border: none;
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+    width: 10.2rem;
+    word-break: keep-all;
+    cursor: pointer;
+    height: 3rem;
+}
+.findpwsubmit {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    bottom: -220px;
+}
+.dlink a{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    bottom: -240px;
+    text-align: right;
+    color: #12B886;
+}
+.pw , .email {
+    font-weight: 550;
+}
+
 /*--bg-page1: #F8F9FA;
 --bg-page2: #FFFFFF;
 --bg-element1: #FFFFFF;
