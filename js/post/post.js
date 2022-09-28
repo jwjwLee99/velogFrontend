@@ -151,57 +151,76 @@ $(() => {
      * ***
      * 댓글 
      * 답글
-     * 할거 ㅈㄴ 많음
+     * 할거 ㅈㄴ 많음 - 백 작업할때 다시 하기
     */
+    /* 댓글 */
+    let replyCnt = 1; // db로 댓글 갯수 불러오기
     let rtrCnt = 1; // db로 답글 갯수 불러오기
-    let writeRtr = $(".writeRtr")
-    let hideRtr = $(".hideRtr")
-    let showRtr = $(".showRtr")
 
-    // 댓글 없을 때
+    let rtrToggle = $(".replyToReply"); // 답글 보기 버튼 부분
+    let rtrSection = $(".rtrSection"); // 답글 부분 기본적으로 display: none
+
+    let show = $(".showRtr")
+    let showLength = show.length;
+
+    let write = $(".writeRtr")
+    let writeLength = write.length;
+
+    let hide = $(".hideRtr")
+    let hideLength = hide.length;
+
+
+    // 답글 없을 때
     if(rtrCnt <= 0){
-        hideRtr.addClass("dpNone");
-        showRtr.addClass("dpNone");
-        $(".rtrSection").addClass("dpNone")
+        hide.addClass("dpNone");
+        show.addClass("dpNone");
+        rtrSection.addClass("dpNone")
         $(".rtInBtn").addClass("dpNone")
-    }else { // 댓글이 있을 때
-        hideRtr.addClass("dpNone");
-        writeRtr.addClass("dpNone");
-        $(".rtrSection").addClass("dpNone")
+    }else { // 답글이 있을 때
+        hide.addClass("dpNone");
+        write.addClass("dpNone");
+        rtrSection.addClass("dpNone")
         $(".rtrTextArea").addClass("dpNone");
     }
-    // 답글 보기
-    showRtr.click(() => {
-        showRtr.addClass("dpNone")
-        $(".rtrSection").removeClass("dpNone")
-        $(".rtrSection").slideDown(100)
-        hideRtr.removeClass("dpNone")
-        $(".rtrTextArea").addClass("dpNone")
-    })
+    // 답글보기 클릭
+    for(var i = 0; i < showLength; i++){
+        show[i].on("click", (e) => {
+            console.log("작동")
+            show.addClass("dpNone");
+            $(".rtrSection").removeClass("dpNone")
+            $(".rtrSection").slideDown(100)
+            rtrToggle.append(hideDiv)
+            $(".rtrTextArea").addClass("dpNone")
+        })
+    }
     // 답글쓰기 클릭
-    writeRtr.click(() => {
-        writeRtr.addClass("dpNone")
-        $(".rtrSection").removeClass("dpNone")
-        $(".rtrSection").slideDown(100)
-        hideRtr.removeClass("dpNone")
-        $(".rtrTextArea").removeClass("dpNone")
-    })
+    for(var i = 0; i < writeLength; i++){
+        write[i].on("click",() => {
+            write.addClass("dpNone")
+            rtrSection.removeClass("dpNone")
+            rtrSection.slideDown(100)
+            hide.removeClass("dpNone")
+            $(".rtrTextArea").removeClass("dpNone")
+        })
+    }
+    
     // 숨기기 클릭
-    hideRtr.click(()=> {
-        writeRtr.removeClass("dpNone")
-        $(".rtrSection").slideUp(100)
-        $(".rtrSection").addClass("dpNone")
-        hideRtr.addClass("dpNone")
+    for(var i = 0; i < hideLength; i++){
+        hide[i].on("click",() => {
+            write.removeClass("dpNone")
+        rtrSection.slideUp(100)
+        rtrSection.addClass("dpNone")
+        hide.addClass("dpNone")
         $(".rtrTextArea").addClass("dpNone")
-    })
+        })
+    }
     // 답글쓰기 취소
     $(".closeBtn").click(() => {
-        writeRtr.removeClass("dpNone")
-        $(".rtrSection").slideUp(100)
-        $(".rtrSection").addClass("dpNone")
-        hideRtr.addClass("dpNone")
+        write.removeClass("dpNone")
+        rtrSection.slideUp(100)
+        rtrSection.addClass("dpNone")
+        hide.addClass("dpNone")
     })
-
     // 댓글 수정
     $(".replyUpdateBtn").click(()=> {
         $(".replyBody > div").addClass("dpNone")
@@ -215,8 +234,6 @@ $(() => {
         $(".replyUpdateBtn").removeClass("dpNone")
     })
     // 댓글 수정 완료
-    
-
     // 댓글 삭제
     $(".replyDel").click(()=> {
         $(".modal").fadeIn(100)
@@ -227,4 +244,9 @@ $(() => {
         $(".replyRemove").fadeOut(100)
     })
     // 삭제 확인
+
+    /* 답글 */
+    // 답글이 있을때 showRtr 클릭
+    // 답글이 없을때 writeRtr 클릭
+
 })
