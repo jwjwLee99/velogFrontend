@@ -17,6 +17,7 @@
 
     <!-- search.css -->
     <link rel="stylesheet" href="../../css/post/search.css">
+    <script src="../../js/post/search.js"></script>
 </head>
 
 <body>
@@ -135,7 +136,7 @@
                                 clip-rule="evenodd" fill="currentColor">
                             </path>
                         </svg>
-                        <input type="text" class="" placeholder="검색어를 입력하세요" value="">
+                        <input type="text" class="searchInput" placeholder="검색어를 입력하세요" value="">
                     </div>
                 </div>
             </div>
@@ -144,8 +145,9 @@
             </p>
             <div class="posts">
                 <div class="single-post">
-                    <div class="uesr-info">
-                        <a href=""><img src="" alt="사용자 사진">
+                    <div class="user-info">
+                        <a href="">
+                            <img src="https://velog.velcdn.com/images/dev_boku/profile/ba7332cf-56a0-45f6-9568-713ec428c6b5/image.JPG" alt="사용자 사진">
                         </a>
                         <div class="username">
                             <a href="">사용자 이름</a>
@@ -153,14 +155,14 @@
                     </div>
                     <a href="">
                         <div class="main-picture" style="padding-top: 52.356%;">
-                            <img src="" alt="main-picture">
+                            <img src="https://velog.velcdn.com/images/dev_boku/post/69ccbdfd-40fe-4ffd-a26e-fdf6154464c2/image.png" alt="main-picture">
                         </div>
                     </a>
 
                     <a href="">
                         <h2>제목</h2>
                     </a>
-                    <p>내용 요약</p>
+                    <p>내용 요약</p>s
                     <div class="tags-wrapper">
                         <a class="tags" href="">태그 이름</a>
                     </div>
@@ -177,8 +179,9 @@
                     </div>
                 </div>
                 <div class="single-post">
-                    <div class="uesr-info">
-                        <a href=""><img src="" alt="사용자 사진">
+                    <div class="user-info">
+                        <a href="">
+                            <img src="https://velog.velcdn.com/images/dev_boku/profile/ba7332cf-56a0-45f6-9568-713ec428c6b5/image.JPG" alt="사용자 사진">
                         </a>
                         <div class="username">
                             <a href="">사용자 이름</a>
@@ -186,24 +189,21 @@
                     </div>
                     <a href="">
                         <div class="main-picture" style="padding-top: 52.356%;">
-                            <img src="" alt="main-picture">
+                            <img src="https://velog.velcdn.com/images/dev_boku/post/69ccbdfd-40fe-4ffd-a26e-fdf6154464c2/image.png" alt="main-picture">
                         </div>
                     </a>
 
                     <a href="">
                         <h2>제목</h2>
                     </a>
-                    <p>내용 요약</p>
+                    <p>내용 요약</p>s
                     <div class="tags-wrapper">
                         <a class="tags" href="">태그 이름</a>
                     </div>
                     <div class="subinfo">
                         <span>xxxx년 x월 x일</span>
                         <div class="separator">·</div>
-                        <span>
-                            "x"
-                            "개의 댓글"
-                        </span>
+                        <span>x개의 댓글</span>
                         <div class="separator">·</div>
                         <span class="likes"><svg width="24" height="24" viewBox="0 0 24 24">
                                 <path fill="currentColor" d="M18 1l-6 4-6-4-6 5v7l12 10 12-10v-7z">
@@ -212,6 +212,7 @@
                         </span>
                     </div>
                 </div>
+                
             </div>
 
 
