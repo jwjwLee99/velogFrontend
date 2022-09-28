@@ -18,39 +18,40 @@
 </head>
 
 <body>
-    <div class="sc-gsDKAQ dWETBP">
-        <div class="wrapper">
+    <div class="page">
+        <!-- 로그인 -->
+        <div class="loginpage">
             <div class="gray-block">
                 <div><img src="https://static.velog.io/static/media/undraw_joyride_hnno.fae6b95e.svg" alt="welcome">
                     <div class="welcome">환영합니다!</div>
                 </div>
             </div>
             <div class="white-block">
-                <div class="exit-wrapper"><svg stroke="currentColor" fill="currentColor" stroke-width="0"
+                <div class="exit-loginpage"><svg stroke="currentColor" fill="currentColor" stroke-width="0"
                         viewBox="0 0 24 24" tabindex="1" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
                         <path
                             d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z">
                         </path>
                     </svg></div>
-                <div class="block-content">
-                    <div class="sc-gKclnd JnHrt">
-                        <div class="upper-wrapper">
+                <div class="block-login">
+                    <div class="content-login">
+                        <div class="upper-loginpage">
                             <h2 data-testid="title">로그인</h2>
                             <section>
                                 <div class="loginSection">
-                                    <form class="sc-dkPtRN swztF">
-                                        <input tabindex="2" placeholder="아이디를 입력하세요." value="">
-                                        <input tabindex="2" placeholder="비밀번호를 입력하세요." type="password" value="">
+                                    <form class="pwid">
+                                        <input tabindex="2" placeholder="아이디를 입력하세요." type="text" value="">
+                                        <input tabindex="3" placeholder="비밀번호를 입력하세요." type="password" value="">
                                     </form>
-                                    <button class="loginSubmit" tabindex="3">로그인</button>
+                                    <button class="loginSubmit" tabindex="4">로그인</button>
                                 </div>
-                                
+
                             </section>
                             <section>
-                                <h4><a href="">아이디/비밀번호 찾기</a></h4>
-                                <div class="sc-eCImPb jNMyjf"><a tabindex="4"
+                                <h4><a href="" tabindex="5">아이디/비밀번호 찾기</a></h4>
+                                <div class="sosciallogin"><a tabindex="6"
                                         href="https://v2.velog.io/api/v2/auth/social/redirect/github?next=/"
-                                        class="sc-hKwDye bSWsvS" style="background: rgb(39, 46, 51);"><svg width="20"
+                                        class="sosciallogin git" style="background: rgb(39, 46, 51);"><svg width="20"
                                             height="20" fill="currentColor" viewBox="0 0 20 20">
                                             <mask id="github" width="20" height="20" x="0" y="0"
                                                 maskUnits="userSpaceOnUse">
@@ -61,10 +62,10 @@
                                             <g mask="url(#github)">
                                                 <path fill="currentColor" d="M0 0h20v20H0z"></path>
                                             </g>
-                                        </svg></a><a tabindex="5"
+                                        </svg></a><a tabindex="7"
                                         href="https://v2.velog.io/api/v2/auth/social/redirect/google?next=/"
-                                        class="sc-hKwDye ihJtSI" style="background: white;"><svg width="20" height="20"
-                                            fill="none" viewBox="0 0 20 20">
+                                        class="sosciallogin google" style="background: white;"><svg width="20"
+                                            height="20" fill="none" viewBox="0 0 20 20">
                                             <path fill="#4285F4"
                                                 d="M19.99 10.187c0-.82-.069-1.417-.216-2.037H10.2v3.698h5.62c-.113.92-.725 2.303-2.084 3.233l-.02.124 3.028 2.292.21.02c1.926-1.738 3.037-4.296 3.037-7.33z">
                                             </path>
@@ -77,10 +78,10 @@
                                             <path fill="#EB4335"
                                                 d="M10.2 3.853c1.914 0 3.206.809 3.943 1.484l2.878-2.746C15.253.985 12.953 0 10.199 0 6.211 0 2.766 2.237 1.09 5.492l3.297 2.503A6.152 6.152 0 0 1 10.2 3.853z">
                                             </path>
-                                        </svg></a><a tabindex="6"
+                                        </svg></a><a tabindex="8"
                                         href="https://v2.velog.io/api/v2/auth/social/redirect/facebook?next=/"
-                                        class="sc-hKwDye bSWsvS" style="background: rgb(59, 89, 152);"><svg width="20"
-                                            height="20" fill="none" viewBox="0 0 20 20">
+                                        class="sosciallogin facebook" style="background: rgb(59, 89, 152);"><svg
+                                            width="20" height="20" fill="none" viewBox="0 0 20 20">
                                             <mask id="facebook" width="12" height="20" x="4" y="0"
                                                 maskUnits="userSpaceOnUse">
                                                 <path fill="#fff" fill-rule="evenodd"
@@ -94,7 +95,142 @@
                             </section>
                         </div>
                         <div class="foot"><span>아직 회원이 아니신가요?</span>
-                            <div class="link" tabindex="7" data-testid="switchmode">회원가입</div>
+                            <div class="link" tabindex="9" data-testid="switchmode">회원가입</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 회원가입 -->
+        <!-- display : none -->
+        <!-- 회원가입 버튼 누를 시 위에 로그인 wrapper (display:none) > 회원가입을 display : block -->
+        <!-- 취소 확인 > 취소 누를 시 로그인 창 뜨게 -->
+    </div>
+
+    <div class="account">
+        <!-- 회원가입 -->
+        <!-- display : none -->
+        <!-- 회원가입 버튼 누를 시 위에 로그인 wrapper (display:none) > 회원가입을 display : block -->
+        <!-- 취소 확인 > 취소 누를 시 로그인 창 뜨게 -->
+        <div class="accountpage">
+            <div class="white-block">
+                <div class="exit-accountpage"><svg stroke="currentColor" fill="currentColor" stroke-width="0"
+                        viewBox="0 0 24 24" tabindex="1" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z">
+                        </path>
+                    </svg></div>
+                <div class="block-accountpage">
+                    <div class="content-accountpage">
+                        <div class="upper-accountpage">
+                            <h2 data-testid="title">회원가입</h2>
+                            <section>
+                                <div class="accountSection">
+                                    <form class="creataccount">
+                                        <input tabindex="2" placeholder="이름을 입력하세요." type="text" value="">
+                                        <input tabindex="3" placeholder="아이디를 입력하세요." type="text" value="">
+                                        <input tabindex="4" placeholder="비밀번호를 입력하세요." type="password" value="">
+                                        <input tabindex="4" placeholder="비밀번호 재입력." type="password" value="">
+                                        <input tabindex="5" placeholder="전화번호를 입력하세요." type="text" value="">
+                                        <input tabindex="6" placeholder="이메일을 입력하세요." type="text" value="">
+                                        <div class="pn"><input tabindex="7" maxlength="6" placeholder="주민번호 앞자리"
+                                                type="text" value=""> - <input tabindex="8" maxlength="7"
+                                                placeholder="주민번호 뒷자리" type="password" value=""></div>
+                                    </form>
+                                    <button class="accountSubmit" tabindex="9">회원가입</button>
+                                </div>
+                            </section>
+                        </div>
+                        <div class="alink" tabindex="14" data-testid="switchmode">취소</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="search">
+        <!-- 아이디,비밀번호 찾기 -->
+        <div class="searchpage">
+            <div class="white-block">
+                <div class="exit-searchpage"><svg stroke="currentColor" fill="currentColor" stroke-width="0"
+                        viewBox="0 0 24 24" tabindex="1" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z">
+                        </path>
+                    </svg></div>
+                <div class="block-searchpage">
+                    <div class="content-searchpage">
+                        <div class="upper-searchpage">
+                            <div class="search-title">
+                                <h2>아이디 찾기</h2>
+                            </div>
+                            <section>
+                                <div class="searchsection">
+                                    <form class="find-name">
+                                        <div class="name">
+                                            <label>이름&nbsp;&nbsp;<input tabindex="2" placeholder="이름을 입력하세요."
+                                                    type="text" value=""></label>
+                                        </div>
+                                        <div class="pnum">
+                                            <label>번호&nbsp;&nbsp;<input tabindex="2" placeholder="전화번호를 입력하세요."
+                                                    type="tel" value=""></label>
+                                        </div>
+                                    </form>
+                                    <div class="findsubmit">
+                                        <button class="enter" value="찾기" onClick="id_search()"> 찾기 </button>
+                                        <button class="cancle" value="취소" onClick="history.back()"> 취소 </button>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                        <div class="clink">
+                            <a href="" tabindex="5">비밀번호 찾기</a>
+                            <a href="" tabindex="5">회원가입</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="findpw">
+        <!-- 비밀번호 찾기 -->
+        <div class="findpwpage">
+            <div class="white-block">
+                <div class="exit-findpwpage"><svg stroke="currentColor" fill="currentColor" stroke-width="0"
+                        viewBox="0 0 24 24" tabindex="1" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z">
+                        </path>
+                    </svg></div>
+                <div class="block-findpwpage">
+                    <div class="content-findpwpage">
+                        <div class="upper-findpwpage">
+                            <div class="findpw-title">
+                                <h2>비밀번호 찾기</h2>
+                            </div>
+                            <section>
+                                <div class="findpwsection">
+                                    <form class="find-pw">
+                                        <div class="pw">
+                                            <label>아이디&nbsp;&nbsp;<input tabindex="2" placeholder="아이디를 입력하세요."
+                                                    type="text" value=""></label>
+                                        </div>
+                                        <div class="email">
+                                            <label>이메일&nbsp;&nbsp;<input tabindex="2" placeholder="이메일을 입력하세요."
+                                                    type="text" value=""></label>
+                                        </div>
+                                    </form>
+                                    <div class="findpwsubmit">
+                                        <button class="pwenter" value="찾기" onClick="id_search()"> 찾기 </button>
+                                        <button class="pwcancle" value="취소" onClick="history.back()"> 취소 </button>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                        <div class="dlink">
+                            <a href="" tabindex="5">아이디 찾기</a>
+                            <a href="" tabindex="5">회원가입</a>
                         </div>
                     </div>
                 </div>
