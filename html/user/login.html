@@ -13,12 +13,12 @@
     <link rel="stylesheet" href="../../css/login.css">
     <title>velog</title>
     <link rel="shortcut icon" href="https://static.velog.io/favicon.ico" type="image/x-icon">
-
+    <script src="../../js/login.js"></script>
 
 </head>
 
 <body>
-    <div class="page">
+    <div class="login">
         <!-- 로그인 -->
         <div class="loginpage">
             <div class="gray-block">
@@ -48,7 +48,7 @@
 
                             </section>
                             <section>
-                                <h4><a href="" tabindex="5">아이디/비밀번호 찾기</a></h4>
+                                <h4><div class="find-pwid" tabindex="5" data-testid="switchmode">아이디/비밀번호 찾기</div></h4>
                                 <div class="sosciallogin"><a tabindex="6"
                                         href="https://v2.velog.io/api/v2/auth/social/redirect/github?next=/"
                                         class="sosciallogin git" style="background: rgb(39, 46, 51);"><svg width="20"
@@ -179,20 +179,20 @@
                                     </form>
                                     <div class="findsubmit">
                                         <button class="enter" value="찾기" onClick="id_search()"> 찾기 </button>
-                                        <button class="cancle" value="취소" onClick="history.back()"> 취소 </button>
+                                        <button class="cancle" value="취소"> 취소 </button>
                                     </div>
                                 </div>
                             </section>
                         </div>
                         <div class="clink">
-                            <a href="" tabindex="5">비밀번호 찾기</a>
-                            <a href="" tabindex="5">회원가입</a>
+                            <div class="pwfind" tabindex="14" data-testid="switchmode">비밀번호 찾기</div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
     <div class="findpw">
         <!-- 비밀번호 찾기 -->
         <div class="findpwpage">
@@ -223,14 +223,13 @@
                                     </form>
                                     <div class="findpwsubmit">
                                         <button class="pwenter" value="찾기" onClick="id_search()"> 찾기 </button>
-                                        <button class="pwcancle" value="취소" onClick="history.back()"> 취소 </button>
+                                        <button class="pwcancle" value="취소"> 취소 </button>
                                     </div>
                                 </div>
                             </section>
                         </div>
                         <div class="dlink">
-                            <a href="" tabindex="5">아이디 찾기</a>
-                            <a href="" tabindex="5">회원가입</a>
+                            <div class="pwlogin" tabindex="14" data-testid="switchmode">회원가입</div>
                         </div>
                     </div>
                 </div>
