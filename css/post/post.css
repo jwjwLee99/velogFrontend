@@ -1,6 +1,10 @@
 .w802px{
     width: 802px !important;
 }
+/* header index와 맞지 않아 따로 저장 */
+#scrollMoveHeader {
+    height: 4rem;
+}
 #root{
     z-index: -1000;
 }
