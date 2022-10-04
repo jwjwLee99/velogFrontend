@@ -5,12 +5,7 @@
  아니면 그냥 태그를 불러올수 있어
  일단 html이랑 css로 기본적인 디자인을 하고, 기능적으로 있는거는 나중에 생각하자
  */
-
- .section {
-    width: 90%;
-    height: 4rem;
-    margin: 0 auto;
- }
+ /*여기 건드려서 고정 상단바 메뉴 바꾸기*/
 
 .main-list {
     display: flex;
@@ -18,6 +13,19 @@
     width: 90%;
     height: 4rem;
     margin: 0 auto;
+    margin-top: 4rem;
+    height: 5000px;
+}
+
+/* 이것도 flex 이지?ㅇㅇ */
+.main-list2 {
+    display: none;
+    margin-top: 2rem;
+    width: 90%;
+    height: 4rem;
+    margin: 0 auto;
+    margin-top: 4rem;
+    height: 5000px;
 }
 
 .list-box {
@@ -30,7 +38,7 @@
     flex-wrap: wrap;
 }
 
-.post-padding {
+.post-margin {
     width: 19.8rem;
     background: var(--bg-element1);
     border-radius: 4px;
@@ -108,12 +116,4 @@
     width: 0.75rem;
     height: 0.75rem;
     margin-right: 0.5rem;
-}
-/* 이것도 flex 이지?ㅇㅇ */
-.main-list2 {
-    display: none;
-    margin-top: 2rem;
-    width: 90%;
-    height: 4rem;
-    margin: 0 auto;
 }

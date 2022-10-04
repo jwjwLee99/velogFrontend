@@ -239,7 +239,6 @@ nav div div.userSection > svg:hover {
 /* scroll move header : 마우스 휠 위로 올릴때 나오도록 설정 필요*/
 #scrollMoveHeader{
     display: none;
-    height: 4rem;
     position: fixed;
     top: 0px;
     width: 100%;
@@ -252,21 +251,32 @@ nav div div.userSection > svg:hover {
 #scrollMoveHeader nav {
     margin-right: 190px;
 }
+
+/* 스크롤헤더 트렌딩 밑줄부분 박스랑 맞추는거 여기 했음*/
 #scrollMoveHeader .tabMenu {
-    margin-top: -2rem;
+    margin-top: 0rem;
+    margin-bottom: -0.5rem;
 }
 #scrollMoveHeader .tabMenu .menu{
     margin-left: auto;
     margin-right: auto;
 }
+
 .section {
-    margin-top: 1.5rem;
     display: flex;
     -webkit-box-pack: justify;
     justify-content: space-between;
     -webkit-box-align: center;
     align-items: center;
     position: relative;
+    width: 90%;
+    height: 4rem;
+    margin: 0 auto;
+    margin-left: 0rem;
+    margin-right: auto;
+}
+header .section {
+    width: 100%;
 }
 
 /* left section */
@@ -311,7 +321,7 @@ nav div div.userSection > svg:hover {
     background: #343A40;
 }
 
-.section .leftSection .rightMenu {
+.section .leftSection .recentSelect {
     background: #fff;
     height: 2rem;
     width: 6rem;
@@ -329,11 +339,35 @@ nav div div.userSection > svg:hover {
     box-shadow: rgb(0 0 0 / 5%) 0px 0px 4px;
     cursor: pointer;
 }
-.section .leftSection .rightMenu svg {
+.section .leftSection .recentSelect svg {
     width: 1.5rem;
     height: 1.5rem;
 }
-
+.rightMenu {
+    display: none;
+    position: absolute;
+    right: 0px;
+    top: 100%;
+    z-index: 5;
+}
+.rightMenu .recentMenu {
+    margin-top: 0.5rem;
+    width: 12rem;
+    box-shadow: rgb(0 0 0 / 10%) 0px 0px 8px 0px;
+    background: #fff;
+    color: #212529;
+    transform-origin: right top;
+}
+.background {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    background-color: rgb(0 0 0 / 10%);
+}
 /* right section */
 .section .rightSection {
     display: flex;
@@ -348,9 +382,10 @@ nav div div.userSection > svg:hover {
     counter-reset: #868E96;
 }
 
+
 /* right etcmenubtn 클릭시 생성 */
 .section .etcMenuBox{
-    display: none;
+    display: flex;
     position: absolute;
     right: 0;
     top: 100%;
