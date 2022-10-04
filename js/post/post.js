@@ -151,90 +151,31 @@ $(() => {
      * ***
      * 댓글 
      * 답글
+     * 댓글 답글 토글 완료 답답글 아직 남음
      * 할거 ㅈㄴ 많음 - 백 작업할때 다시 하기
     */
     /* 댓글 */
     let replyCnt = 1; // db로 댓글 갯수 불러오기
-    let rtrCnt = 1; // db로 답글 갯수 불러오기
 
-    let rtrToggle = $(".replyToReply"); // 답글 보기 버튼 부분
-    let rtrSection = $(".rtrSection"); // 답글 부분 기본적으로 display: none
-
-    let show = $(".showRtr")
-    let showLength = show.length;
-
-    let write = $(".writeRtr")
-    let writeLength = write.length;
-
-    let hide = $(".hideRtr")
-    let hideLength = hide.length;
-
-
-    // 답글 없을 때
-    if(rtrCnt <= 0){
-        hide.addClass("dpNone");
-        show.addClass("dpNone");
-        rtrSection.addClass("dpNone")
-        $(".rtInBtn").addClass("dpNone")
-    }else { // 답글이 있을 때
-        hide.addClass("dpNone");
-        write.addClass("dpNone");
-        rtrSection.addClass("dpNone")
-        $(".rtrTextArea").addClass("dpNone");
-    }
-    // 답글보기 클릭
-    for(var i = 0; i < showLength; i++){
-        show[i].on("click", (e) => {
-            console.log("작동")
-            show.addClass("dpNone");
-            $(".rtrSection").removeClass("dpNone")
-            $(".rtrSection").slideDown(100)
-            rtrToggle.append(hideDiv)
-            $(".rtrTextArea").addClass("dpNone")
-        })
-    }
-    // 답글쓰기 클릭
-    for(var i = 0; i < writeLength; i++){
-        write[i].on("click",() => {
-            write.addClass("dpNone")
-            rtrSection.removeClass("dpNone")
-            rtrSection.slideDown(100)
-            hide.removeClass("dpNone")
-            $(".rtrTextArea").removeClass("dpNone")
-        })
-    }
-    
-    // 숨기기 클릭
-    for(var i = 0; i < hideLength; i++){
-        hide[i].on("click",() => {
-            write.removeClass("dpNone")
-        rtrSection.slideUp(100)
-        rtrSection.addClass("dpNone")
-        hide.addClass("dpNone")
-        $(".rtrTextArea").addClass("dpNone")
-        })
-    }
-    // 답글쓰기 취소
-    $(".closeBtn").click(() => {
-        write.removeClass("dpNone")
-        rtrSection.slideUp(100)
-        rtrSection.addClass("dpNone")
-        hide.addClass("dpNone")
-    })
+    /*
+        수정 및 삭제 : 로그인 세션 사용자 인덱스가 같을 경우 보이기
+    */
     // 댓글 수정
-    $(".replyUpdateBtn").click(()=> {
-        $(".replyBody > div").addClass("dpNone")
-        $(".replyUpdate").removeClass("dpNone")
-        $(".replyUpdateBtn").addClass("dpNone")
+    $(".replyUpdateBtn").click(function(){
+        $(this).parents(".replyElement").find(".replyBody > div").addClass("dpNone")
+        $(this).parents(".replyElement").find(".replyUpdate").removeClass("dpNone")
+        $(this).parents(".replyElement").find(".replyUpdate > textarea").val($(this).parents(".replyElement").find(".replyDesc > p").text())
+        $(this).addClass("dpNone")
     })
     // 댓글 수정 취소
-    $(".upcancel").click(()=> {
-        $(".replyBody > div").removeClass("dpNone")
-        $(".replyUpdate").addClass("dpNone")
-        $(".replyUpdateBtn").removeClass("dpNone")
+    $(".upcancel").click(function() {
+        $(this).parents(".replyElement").find(".replyBody > div").removeClass("dpNone")
+        $(this).parents(".replyElement").find(".replyUpdate").addClass("dpNone")
+        $(this).parents(".replyElement").find(".replyUpdateBtn").removeClass("dpNone")
     })
     // 댓글 수정 완료
-    // 댓글 삭제
+
+    // 댓글 삭제 - this를 통한 인덱스 가져와서 삭제
     $(".replyDel").click(()=> {
         $(".modal").fadeIn(100)
         $(".replyRemove").fadeIn(100)
@@ -245,8 +186,46 @@ $(() => {
     })
     // 삭제 확인
 
-    /* 답글 */
-    // 답글이 있을때 showRtr 클릭
-    // 답글이 없을때 writeRtr 클릭
+    // 답글
+    let rtrCnt = 0; // db로 댓글에 대한 답글 갯수 불러오기
+
+    // 답글 없을 때 - 답글달기
+    if(rtrCnt <= 0){
+        $(".hideRtr").addClass("dpNone");
+        $(".showRtr").addClass("dpNone");
+        $(".rtrTextArea").css("display", "block")
+        $(".rtr").css("display", "none")
+    }else { // 답글이 있을 때 - 답글보기
+        $(".hideRtr").addClass("dpNone");
+        $(".writeRtr").addClass("dpNone");
+        $(".rtrTextArea").css("display", "none");
+        $(".rtr").css("display", "block")
+    }
+    $(".showRtr").on("click", function(){
+        $(this).addClass("dpNone");
+        $(this).nextAll('.hideRtr').removeClass("dpNone");
+        $(this).nextAll(".rtrSection").slideDown(100);
+    })
+    $(".writeRtr").on("click", function(){
+        $(this).nextAll(".hideRtr").removeClass("dpNone")
+        $(this).addClass("dpNone")
+        $(this).nextAll(".rtrSection").slideDown(100)
+    })
+    $(".hideRtr").on("click",function(){
+        if(rtrCnt <= 0){
+            $(this).prevAll(".writeRtr").removeClass("dpNone")
+        }else{
+            $(this).prevAll(".showRtr").removeClass("dpNone")
+        }
+        $(this).nextAll(".rtrSection").slideUp(100)
+        $(this).addClass("dpNone")
+    })
+
+    // 답글쓰기 취소
+    $(".closeBtn").click(function(){
+        $(this).parents(".replyToReply").find(".writeRtr").removeClass("dpNone")
+        $(this).parents(".replyToReply").find(".rtrSection").slideUp(100)
+        $(this).parents(".replyToReply").find(".hideRtr").addClass("dpNone")
+    })
 
 })
