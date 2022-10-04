@@ -23,5 +23,31 @@ $(() => {
     $("nav div div.userSection img").mouseout(()=> {
         $("nav div div.userSection > svg").css("color", "#868E96")
     })
+
+    $(".recentSelect").click(() => {
+        $(".rightMenu").fadeIn(200)
+        $(".background").fadeIn(200)
+    })
+    // 여기 다시 해보기
+    $(".recentMenu ul li").click(() => {
+        $(".rightMenu").fadeOut(200)
+    })
+    $(".background").click(() => {
+        $(".rightMenu").fadeOut(200)
+        $(".background").fadeOut(200)
+    })
+
+    // 오른쪽 설정 메뉴
+    $(".rightSection").click(() => {
+        $(".etcMenuContents").fadeIn(200)
+        $(".background").fadeIn(200)
+    })
+    $(".etcMenuBox ul li").click(() => {
+        $(".etcMenuContents").fadeOut(200)
+    })
+    $(".background").click(() => {
+        $(".etcMenuContents").fadeOut(200)
+        $(".background").fadeOut(200)
+    })
 })
 
