@@ -1,0 +1,108 @@
+.account {
+    width: 100%;
+    user-select: none;
+}
+.account .accountpage {
+    width: 50%;
+    margin: 0 auto;
+    margin-top: 5%;
+}
+.account .accountpage .white-block h2{
+    height: 4rem;
+    text-align: center;
+    font-size: 2.25rem;
+    font-weight: 900;
+}
+section {
+    margin-top: 1rem;
+}
+section table {
+    position: relative;;
+    width: 50%;
+    margin: 0 auto;
+}
+section table tr {
+    height: 4rem;
+}
+section table tr:nth-child(odd){
+    height: 2rem;
+}
+section table tr:nth-child(2n){
+    margin-bottom: 10px;
+    height: 5rem;
+}
+section table tr td {
+    font-weight: bold;
+    font-size: 1.25rem;
+    padding-top: 0.5rem;
+}
+section table tr td input{
+    appearance: none;
+    width: 480px;
+    height: 2.25rem;
+    border: none;
+    outline: none;
+    box-shadow: 0 2px 1px rgba(0,0,0,0.06), 0 0px 0px rgba(0,0,0,0.06);
+}
+.focus-border{
+    position: relative;
+    left: 0;
+    bottom: 15px;
+    width: 0;
+    height: 2px;
+    background-color: #12B886;
+}
+.isIdBox {
+    position: absolute;
+    right: 0;
+    top: 45px;
+    width: 120px;
+    text-align: center;
+    padding: 5px;
+    color: #12B886;
+}
+.isPWBox {
+    position: absolute;
+    right: 0;
+    top: 275px;
+    width: 120px;
+    text-align: center;
+    color: #12B886;
+}
+.tt {
+    color: #495057;
+}
+.tt span {
+    margin-right: 5px;
+    color: red;
+}
+.btnBox {
+    margin-bottom: 100px;
+}
+.btnBox section {
+    width: 50%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.btnBox section button {
+    width: 200px;
+    height: 50px;
+    border: none;
+    background: #12B886;
+    color: #FFF;
+    border-radius: 4px;
+    box-shadow: rgb(0 0 0 / 9%) 0px 2px 12px 0px;
+    cursor: pointer;
+}
+.btnBox section button:hover {
+    background: #20C997;
+}
+.btnBox section button.accountCancel{
+    background: #FFF;
+    color: #495057;
+}
+.btnBox section button.accountCancel:hover {
+    background: #F8F9FA;
+}

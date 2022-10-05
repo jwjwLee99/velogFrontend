@@ -1,12 +1,11 @@
 $(function (){
-    const userid = $('.userid');
-    const userpw = $('.userpw');
-    const userpw_re = $('.userpw_re');
-    const name = $('.username');
-    const hp = $('userhp');
-    const email = $('.useremail');
-    const isSsn = $('.isssn');
-    const isIdCheck = $('.isidcheck');
+    const userid = $('#userid');
+    const userpw = $('#userpw');
+    const userpw_re = $('#userpwcheck');
+    const name = $('#username');
+    const hp = $('#userpnum');
+    const email = $('#useremail');
+    const isIdCheck = $('#isidCheck');
 
     const expIdText = /^[a-z]+[a-z0-9]{5,19}$/g;
     const expPWText = /^(?=.*[a-zA-z])(?=.*[0-9])(?=.*[$`~!@$!%*#^?&\\(\\)\-_=+]).{8,16}$/;
@@ -17,30 +16,52 @@ $(function (){
 
 
     // 입력시 이벤트
-    userid.input(function(){
-        if(userid.value.length > 4 || userid.value.length < 20){ // 아이디 길이
-        }else if(userid.value == expIdText){ // 정규식
+    userid.change(function(){
+        if(this.value.length < 4){ // 아이디 길이
+            $(".isId").html("5자이상")
+        }else if(this.value.length > 20){
+            $(".isId").html("19자이하")
+        }else if(this.value == expNameText){ // 정규식
+            $(".isId").html("한글금지")
+        }
+        else {
+            isIdCheck.value = 'y'
         }
         // 아이디 중복 검사 추가 필요
     })
-    userpw.input(function(){
-        if(userpw.value.length > 4 || userpw.value.length < 20){ // 비밀번호 길이
-        }else if(userpw.value == expPWText){ // 비밀번호 정규식
-
-        }else {
-
+    userpw.change(function(){
+        let pwCheck1;
+        userpw_re.each(function(){
+            pwCheck1 = this.value;
+        })
+        $(".isPW").html("불일치").css("color", "red")
+        isPWCheck.value = 'n'
+    })
+    userpw_re.change(function(){
+        let pwCheck2;
+        userpw.each(function(){
+            pwCheck2 = this.value;
+        })
+        if(pwCheck2 != this.value){
+            $(".isPW").html("불일치").css("color", "red")
+            isPWCheck.value = 'n'
+        }else{
+            $(".isPW").html("일치").css("color", "#12B886")
+            isPWCheck.value = 'y'
         }
     })
+
+    
 })
 function sendit() {
-    const userid = $('.userid');
-    const userpw = $('.userpw');
-    const userpw_re = $('.userpw_re');
-    const name = $('.username');
-    const hp = $('userhp');
-    const email = $('.useremail');
-    const isSsn = $('.isssn');
-    const isIdCheck = $('.isidcheck');
+    const userid = document.getElementById("userid");
+    const userpw = document.getElementById('userpw');
+    const userpw_re = document.getElementById('userpwcheck');
+    const name = document.getElementById('username');
+    const hp = document.getElementById('userpnum');
+    const email = document.getElementById('useremail');
+    const isIdCheck = document.getElementById('isidCheck');
+    const isPWCheck = document.getElementById('ispwCheck');
 
     const expIdText = /^[a-z]+[a-z0-9]{5,19}$/g;
     const expPWText = /^(?=.*[a-zA-z])(?=.*[0-9])(?=.*[$`~!@$!%*#^?&\\(\\)\-_=+]).{8,16}$/;
@@ -54,22 +75,15 @@ function sendit() {
         alert('아이디를 입력하세요');
         userid.focus();
         return false;
-    }
-    if(userid.value.length < 4 || userid.value.length > 20){
-        alert('아이디는 4자이상 20자이하로 입력하세요');
-        userid.focus();
-        return false;
-    }
-    if(isIdCheck.value == 'n'){
-        alert('아이디 중복체크를 확인하세요');
-        isIdCheck.focus();
-        return false;
+    }else {
+        isIdCheck.value = 'y';
     }
 
     // password
     if(userpw.value == ''){
         alert('비밀번호를 입력하세요');
         userpw.focus();
+        return false;
     }
     if(userpw.value.length < 4 || userpw.value.length > 20){
         alert('비밀번호는 4자이상 20자이하로 입력하세요');
@@ -84,77 +98,20 @@ function sendit() {
 
     // phone number
     if(!expHpText.test(hp.value)){
-        alert('휴대폰번호 형식을 확인하세요\n하이픈(-)을 포함해야합니다.')
+        alert('휴대폰번호 형식을 확인하세요\nex)000-0000-0000')
         hp.focus();
         return false;
     }
 
     // email
     if(!expEmailText.test(email.value)){
-        alert('이메일 형식을 확인하세요');
+        alert('이메일 형식을 확인하세요\nex)OOO@OOO.OOO');
         email.focus();
         return false;
     }
 
-    // ssn
-    if(isSsn.value == 'n'){
-        alert('주민등록번호 유효성을 확인하세요');
-        return false;
+    // join success
+    if(isIdCheck == 'y' && isPWCheck == 'y'){
+        return true;
     }
-
-    return true;
-}
-
-// 주민번호 focus 자동 이동
-function moveFocus(){
-    const ssn1 = document.getElementById('ssn1');
-    if(ssn1.value.length >= 6){
-        document.getElementById('ssn2').focus();
-    }
-}
-
-// 주민번호 유효성 테스트
-function ssnCheck(){
-    const ssn1 = document.getElementById('ssn1');
-    const ssn2 = document.getElementById('ssn2');
-    const isssn = $('.isssn');
-
-    if(ssn1.value == '' || ssn2.value == ''){
-        alert('주민등록번호를 입력하세요');
-        ssn1.focus();
-        return false;
-    }
-
-    const ssn = ssn1.value + ssn2.value;
-    const s1 = Number(ssn.substr(0, 1)) * 2;
-    const s2 = Number(ssn.substr(1, 1)) * 3;
-    const s3 = Number(ssn.substr(2, 1)) * 4;
-    const s4 = Number(ssn.substr(3, 1)) * 5;
-    const s5 = Number(ssn.substr(4, 1)) * 6;
-    const s6 = Number(ssn.substr(5, 1)) * 7;
-    const s7 = Number(ssn.substr(6, 1)) * 8;
-    const s8 = Number(ssn.substr(7, 1)) * 9;
-    const s9 = Number(ssn.substr(8, 1)) * 2;
-    const s10 = Number(ssn.substr(9, 1)) * 3;
-    const s11 = Number(ssn.substr(10, 1)) * 4;
-    const s12 = Number(ssn.substr(11, 1)) * 5;
-    const s13 = Number(ssn.substr(12, 1));
-
-    let result = s1+s2+s3+s4+s5+s6+s7+s8+s9+s10+s11+s12;
-    result = result % 11;
-    result = 11 - result;
-    if(result >= 10) result = result % 10;
-
-    if(result == s13){
-        alert("유효한 주민등록번호입니다.")
-        isssn.value = 'y';
-    }else{
-        alert('유효하지 않은 주민등록번호입니다.')
-    }
-}
-
-// 주민등록번호가 변경 되었을 경우
-function ssnChange(){
-    const isssn = $('.isssn');
-    isssn.value = 'n';
 }
