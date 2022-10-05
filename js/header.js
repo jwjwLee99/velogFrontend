@@ -39,15 +39,17 @@ $(() => {
 
     // 오른쪽 설정 메뉴
     $(".rightSection").click(() => {
-        $(".etcMenuContents").fadeIn(200)
+        $(".etcMenuBox").fadeIn(200)
         $(".background").fadeIn(200)
     })
     $(".etcMenuBox ul li").click(() => {
-        $(".etcMenuContents").fadeOut(200)
+        $(".etcMenuBox").fadeOut(200)
     })
     $(".background").click(() => {
-        $(".etcMenuContents").fadeOut(200)
+        $(".etcMenuBox").fadeOut(200)
         $(".background").fadeOut(200)
     })
-})
 
+    // recentSelect 메뉴목록 active 활성화
+    $(".")
+})
