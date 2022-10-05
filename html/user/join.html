@@ -12,7 +12,100 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <title>velog</title>
     <link rel="shortcut icon" href="https://static.velog.io/favicon.ico" type="image/x-icon">
+    
+    <link rel="stylesheet" href="../../css/user/join.css">
+    <script src="../../js/user/join.js"></script>
+    <script src="../../js/user/regExp.js"></script>
 </head>
-<body>
+<body oncopy="return false" oncut="return false" onpaste="return false">
+    <div class="account">
+        <!-- 회원가입 -->
+        <!-- display : none -->
+        <!-- 회원가입 버튼 누를 시 위에 로그인 wrapper (display:none) > 회원가입을 display : block -->
+        <!-- 취소 확인 > 취소 누를 시 로그인 창 뜨게 -->
+        <div class="accountpage">
+            <div class="white-block">
+                <div class="block-accountpage">
+                    <div class="content-accountpage">
+                        <div class="upper-accountpage">
+                            <h2 data-testid="title">회원가입</h2>
+                            <section>
+                                <input type="hidden" name="isidCheck" id="isidCheck" value="n">
+                                <input type="hidden" name="ispwCheck" id="ispwCheck" value="n">
+                                <table>
+                                    <tr>
+                                        <td class="tt"><span>*</span>아이디</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <input tabindex="2" placeholder="아이디" type="text" id="userid" name="userid" class="etcInput">
+                                            <span class="focus-border"></span>
+                                            <div class="isIdBox">
+                                                <span class="isId"></span>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tt"><span>*</span>비밀번호</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <input tabindex="3" placeholder="비밀번호" type="password" value="" id="userpw" name="userpw" class="etcInput">
+                                            <span class="focus-border"></span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tt"><span>*</span>비밀번호확인</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <input tabindex="4" placeholder="비밀번호 재입력" type="password" value="" id="userpwcheck" name="userpwcheck" class="etcInput">
+                                            <span class="focus-border"></span>
+                                            <div class="isPWBox">
+                                                <span class="isPW"></span>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tt"><span>*</span>닉네임</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <input autocomplete="off" tabindex="5" placeholder="이름" type="text" value="" id="username"name="username" class="etcInput">
+                                            <span class="focus-border"></span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tt"><span>*</span>전화번호</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <input tabindex="6" placeholder="전화번호" type="text" value="" id="userpnum" name="userpnum" class="etcInput">
+                                            <span class="focus-border"></span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tt"><span>*</span>이메일</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <input tabindex="7" placeholder="이메일" type="text" value="" id="useremail" name="useremail" class="etcInput">
+                                            <span class="focus-border"></span>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </section>
+                        </div>
+                        <div class="btnBox">
+                            <section>
+                                <button class="accountSubmit" onclick="return sendit()">회원가입</button>
+                                <button class="accountCancel">취소</button>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
