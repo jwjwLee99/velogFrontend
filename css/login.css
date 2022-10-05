@@ -1,4 +1,6 @@
-.find-pwid {
+.find-pw,.find-id, .clink, .dlink { cursor: pointer !important; user-select: none !important; }
+.find-pw, .find-id {
+    display: inline;
     color: #12B886;
     text-decoration: none;
 }
@@ -295,7 +297,7 @@ h2 {
     outline: 2px solid #12B886;
 }
 button.accountSubmit {
-    position: fixed;
+    position: fixed ;
     right: 10px;
     background: #12B886;
     color: #FFFFFF;
@@ -401,7 +403,7 @@ h2 {
     bottom: 450px;
 }
 button.enter {
-    position: relative;
+    justify-content: center;
     right: 10px;
     background: #12B886;
     color: #FFFFFF;
@@ -411,28 +413,13 @@ button.enter {
     border: none;
     border-top-right-radius: 2px;
     border-bottom-right-radius: 2px;
-    width: 10.2rem;
+    width: 15rem;
     word-break: keep-all;
     cursor: pointer;
-    height: 3rem;
+    height: 3.5rem;
     margin-right: 2px;
 }
-button.cancle {
-    position: relative;
-    right: 10px;
-    background: #12B886;
-    color: #FFFFFF;
-    font-size: 1rem;
-    font-weight: bold;
-    outline: none;
-    border: none;
-    border-top-right-radius: 2px;
-    border-bottom-right-radius: 2px;
-    width: 10.2rem;
-    word-break: keep-all;
-    cursor: pointer;
-    height: 3rem;
-}
+
 .findsubmit {
     position: relative;
     display: flex;
@@ -442,10 +429,10 @@ button.cancle {
 .clink {
     position: relative;
     display: flex;
-    flex-direction: column;
     align-items: center;
     bottom: -240px;
     text-align: right;
+    justify-content: center;
     color: #12B886;
 }
 .name , .pnum {
@@ -508,7 +495,7 @@ h2 {
     margin-inline-end: 0px;
     font-weight: 900;
 }
-.find-pw input {
+.find-pw1 input {
     border-radius: 2px;
     color: #000000;
     flex: 1 1 0%;
@@ -520,11 +507,11 @@ h2 {
     appearance: none;
     outline: none;
 }
-.find-pw input:focus {
+.find-pw1 input:focus {
     appearance: none;
     outline: 2px solid #12B886;
 }
-.find-pw {
+.find-pw1 {
     line-height: 4rem;
     font-size: 1.4rem;
     position: absolute;
@@ -534,7 +521,7 @@ h2 {
     bottom: 450px;
 }
 button.pwenter {
-    position: relative;
+    justify-content: center;
     right: 10px;
     background: #12B886;
     color: #FFFFFF;
@@ -544,10 +531,10 @@ button.pwenter {
     border: none;
     border-top-right-radius: 2px;
     border-bottom-right-radius: 2px;
-    width: 10.2rem;
+    width: 15rem;
     word-break: keep-all;
     cursor: pointer;
-    height: 3rem;
+    height: 3.5rem;
     margin-right: 2px;
 }
 button.pwcancle {
@@ -575,8 +562,8 @@ button.pwcancle {
 .dlink {
     position: relative;
     display: flex;
-    flex-direction: column;
     align-items: center;
+    justify-content: center;
     bottom: -240px;
     text-align: right;
     color: #12B886;
