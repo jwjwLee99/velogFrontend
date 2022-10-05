@@ -1,0 +1,28 @@
+.mainPost {
+  margin-top: 1.5rem;
+  width: 1728px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.postMenu {
+  display: flex;
+}
+
+.postMenu .tab-wrapper {
+  display: flex;
+  position: relative;
+}
+
+.likePost {
+  width: 8rem;
+  height: 3rem;
+  font-size: 1.125rem;
+  color: #868E96;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  text-decoration: none;
+}
