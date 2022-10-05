@@ -1,11 +1,20 @@
 // login.js
+/*
+main1 = account
+main2 = login
+main3 = search
+main4 = findpw
+*/
 
 $(() => {
-    let accountBtn = $(".link")
-    let loginBtn = $(".alink")
 
     let main1 = $(".account")
     let main2 = $(".login")
+    let main3 = $(".search")
+    let main4 = $(".findpw")
+
+    let accountBtn = $(".link")
+    let loginBtn = $(".alink")
 
     accountBtn.click(() => {
         accountBtn.addClass("active")
@@ -21,66 +30,63 @@ $(() => {
         main2.css("display", "flex")
     })
 
-    let pwidBtn = $(".find-pwid")
-    let cancleBtn = $(".cancle")
+    let idBtn = $(".find-id")
+    let cancleBtn = $(".loginBtn")
 
-    let main3 = $(".search")
-    let main4 = $(".login")
-
-    pwidBtn.click(() => {
-        pwidBtn.addClass("active")
+    idBtn.click(() => {
+        idBtn.addClass("active")
         cancleBtn.removeClass("active")
         main3.css("display", "flex")
-        main4.css("display", "none")
+        main2.css("display", "none")
     })
 
     cancleBtn.click(() => {
-        pwidBtn.removeClass("active")
+        idBtn.removeClass("active")
         cancleBtn.addClass("active")
         main3.css("display", "none")
+        main2.css("display", "flex")
+    })
+
+    let pwBtn = $(".find-pw")
+    let cancleBtn2 = $(".loginBtn2")
+
+    pwBtn.click(() => {
+        pwBtn.addClass("active")
+        cancleBtn2.removeClass("active")
+        main4.css("display", "flex")
+        main2.css("display", "none")
+    })  
+
+    cancleBtn2.click(() => {
+        pwBtn.removeClass("active")
+        cancleBtn2.addClass("active")
+        main4.css("display", "none")
+        main2.css("display", "flex")
+    })
+
+    let findpwBtn = $(".pwfind")
+
+    findpwBtn.click(() => {
+        findpwBtn.addClass("active")
         main4.css("display", "flex")
     })
 
+    let loginBtn2 = $(".loginBtn2")
 
-    let pwfindBtn = $(".pwfind")
-    let canclepwBtn = $(".pwcancle")
-
-    let main5 = $(".findpw")
-    let main6 = $(".login")
-
-    pwfindBtn.click(() => {
-        pwfindBtn.addClass("active")
-        canclepwBtn.removeClass("active")
-        main5.css("display", "flex")
-        main6.css("display", "none")
+    loginBtn2.click(() => {
+        loginBtn2.addClass("active")
+        main2.css("display", "flex")
+        main4.css("display", "none")
+        main3.css("display", "none")
     })
 
-    canclepwBtn.click(() => {
-        pwfindBtn.removeClass("active")
-        canclepwBtn.addClass("active")
-        main5.css("display", "none")
-        main6.css("display", "flex")
-    })
+    let pwaccountBtn = $(".pwaccount")
 
-    let pwloginBtn = $(".pwlogin")
-    let canclepwBtn1 = $(".pwcancle")
-
-    let main7 = $(".account")
-    let main8 = $(".search")
-    let main9 = $(".findpw")
-
-    pwloginBtn.click(() => {
-        pwloginBtn.addClass("active")
-        canclepwBtn1.removeClass("active")
-        main7.css("display", "flex")
-        main8.css("display", "none")
-        main9.css("display", "none")
-    })
-    canclepwBtn1.click(() => {
-        pwloginBtn.removeClass("active")
-        canclepwBtn1.addClass("active")
-        main7.css("display", "none")
-        main8.css("display", "flex")
+    pwaccountBtn.click(() => {
+        pwaccountBtn.addClass("active")
+        main1.css("display", "flex")
+        main4.css("display", "none")
+        main3.css("display", "none")
     })
 
 })
@@ -107,9 +113,9 @@ function account_check() {
     };
 
     //비밀번호 영문자+숫자+특수조합(8~25자리 입력) 정규식
-    var userpwcheck = /^(?=.*[a-zA-Z])(?=.*[!@#$%^*+=-])(?=.*[0-9]).{8,25}$/;
+    var userpwdcheck = /^(?=.*[a-zA-Z])(?=.*[!@#$%^*+=-])(?=.*[0-9]).{8,25}$/;
 
-    if (!userpwcheck.test(userpw.value)) {
+    if (!userpwdcheck.test(userpw.value)) {
         alert("비밀번호는 영문자+숫자+특수문자 조합으로 8~25자리 사용해야 합니다.");
         userpw.focus();
         return false;
