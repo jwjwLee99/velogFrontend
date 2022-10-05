@@ -61,7 +61,7 @@ section table tr td input{
     padding: 5px;
     color: #12B886;
 }
-.isPWBox {
+.isPWCBox {
     position: absolute;
     right: 0;
     top: 275px;

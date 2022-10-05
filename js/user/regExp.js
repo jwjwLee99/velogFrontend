@@ -17,14 +17,16 @@ $(function (){
 
     // 입력시 이벤트
     userid.change(function(){
+        console.log(this.value)
         if(this.value.length < 4){ // 아이디 길이
-            $(".isId").html("5자이상")
+            $(".isId").html("4자이상").css("color","red")
         }else if(this.value.length > 20){
-            $(".isId").html("19자이하")
+            $(".isId").html("20자이하").css("color","red")
         }else if(this.value == expNameText){ // 정규식
-            $(".isId").html("한글금지")
+            $(".isId").html("한글금지").css("color","red")
         }
         else {
+            $(".isId").html("")
             isIdCheck.value = 'y'
         }
         // 아이디 중복 검사 추가 필요
@@ -34,8 +36,11 @@ $(function (){
         userpw_re.each(function(){
             pwCheck1 = this.value;
         })
-        $(".isPW").html("불일치").css("color", "red")
+        $(".isPWC").html("불일치").css("color", "red")
         isPWCheck.value = 'n'
+        if(this.value != expPWText){
+            $("")
+        }
     })
     userpw_re.change(function(){
         let pwCheck2;
@@ -43,10 +48,10 @@ $(function (){
             pwCheck2 = this.value;
         })
         if(pwCheck2 != this.value){
-            $(".isPW").html("불일치").css("color", "red")
+            $(".isPWC").html("불일치").css("color", "red")
             isPWCheck.value = 'n'
         }else{
-            $(".isPW").html("일치").css("color", "#12B886")
+            $(".isPWC").html("일치").css("color", "#12B886")
             isPWCheck.value = 'y'
         }
     })
