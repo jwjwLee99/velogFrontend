@@ -68,11 +68,13 @@ $(function (){
         }
     })
     $(".accountSubmit").click(function(){
-        console.log(sendit())
         if(sendit()){
             console.log(true)
             $(".background").fadeIn(500)
         }
+    })
+    $(".modalCancel").click(function(){
+        $(".background").fadeOut(500)
     })
 })
 function sendit() {
