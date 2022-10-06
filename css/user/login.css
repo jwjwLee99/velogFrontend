@@ -93,6 +93,7 @@ h2 {
     margin-top: 1rem;
     margin-bottom: 1rem;
     color: #868E96;
+    user-select: none;
 }
 .pwid {
     width: 100%;

@@ -10,10 +10,12 @@
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
-    <link rel="stylesheet" href="../../css/login.css">
     <title>velog</title>
     <link rel="shortcut icon" href="https://static.velog.io/favicon.ico" type="image/x-icon">
-    <script src="../../js/login.js"></script>
+    
+    
+    <script src="../../js/user/login.js"></script>
+    <link rel="stylesheet" href="../../css/user/login.css">
 
 </head>
 
@@ -49,7 +51,7 @@
                             </section>
                             <section>
                                 <h4>
-                                    <div class="find-id" tabindex="5" data-testid="switchmode">아이디 찾기</div>
+                                    <div class="find-id" tabindex="5" data-testid="switchmode">아이디 찾기</div> |
                                     <div class="find-pw" tabindex="6" data-testid="switchmode">비밀번호 찾기</div>
                                 </h4>
                                 <div class="sosciallogin"><a tabindex="7"
@@ -108,56 +110,6 @@
         <!-- display : none -->
         <!-- 회원가입 버튼 누를 시 위에 로그인 wrapper (display:none) > 회원가입을 display : block -->
         <!-- 취소 확인 > 취소 누를 시 로그인 창 뜨게 -->
-    </div>
-
-    <div class="account">
-        <!-- 회원가입 -->
-        <!-- display : none -->
-        <!-- 회원가입 버튼 누를 시 위에 로그인 wrapper (display:none) > 회원가입을 display : block -->
-        <!-- 취소 확인 > 취소 누를 시 로그인 창 뜨게 -->
-        <div class="accountpage">
-            <div class="white-block">
-                <div class="exit-accountpage"><svg stroke="currentColor" fill="currentColor" stroke-width="0"
-                        viewBox="0 0 24 24" tabindex="1" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z">
-                        </path>
-                    </svg></div>
-                <div class="block-accountpage">
-                    <div class="content-accountpage">
-                        <div class="upper-accountpage">
-                            <h2 data-testid="title">회원가입</h2>
-                            <section>
-                                <div class="accountSection">
-                                    <form class="creataccount">
-                                        <input tabindex="2" placeholder="아이디를 입력하세요." type="text" value="" id="userid"
-                                            name="userid">
-                                        <input tabindex="3" placeholder="비밀번호를 입력하세요." type="password" value=""
-                                            id="userpw" name="userpw">
-                                        <input tabindex="4" placeholder="비밀번호 재입력." type="password" value=""
-                                            id="userpwcheck" name="userpwcheck">
-                                        <input tabindex="5" placeholder="이름을 입력하세요." type="text" value="" id="username"
-                                            name="username">
-                                        <input tabindex="6" placeholder="전화번호를 입력하세요." type="text" value=""
-                                            id="userpnum" name="userpnum">
-                                        <input tabindex="7" placeholder="이메일을 입력하세요." type="text" value=""
-                                            id="useremail" name="useremail">
-                                        <div class="pn"><input tabindex="8" maxlength="6" placeholder="주민번호 앞자리"
-                                                type="text" value="" id=""> - <input tabindex="9" maxlength="7"
-                                                placeholder="주민번호 뒷자리" type="password" value=""></div>
-                                        <button class="accountSubmit" onclick="account_check();"
-                                            tabindex="10">회원가입</button>
-                                    </form>
-
-                                </div>
-                            </section>
-                        </div>
-                        <div class="alink" tabindex="11" data-testid="switchmode">취소</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
     </div>
 
     <div class="search">
