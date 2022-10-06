@@ -20,9 +20,6 @@
 <body oncopy="return false" oncut="return false" onpaste="return false">
     <div class="account">
         <!-- 회원가입 -->
-        <!-- display : none -->
-        <!-- 회원가입 버튼 누를 시 위에 로그인 wrapper (display:none) > 회원가입을 display : block -->
-        <!-- 취소 확인 > 취소 누를 시 로그인 창 뜨게 -->
         <div class="accountpage">
             <div class="white-block">
                 <div class="block-accountpage">
@@ -30,7 +27,7 @@
                         <div class="upper-accountpage">
                             <h2 data-testid="title">Welcome to Velog</h2>
                             <div class="etcNotice">
-                                <strong><span>*</span> 은 필수 사항입니다.</strong>
+                                <strong><span>*</span>은 필수 사항입니다.</strong>
                             </div>
                             <section>
                                 <input type="hidden" name="isidCheck" id="isidCheck" value="n">
@@ -67,7 +64,7 @@
                                         <td>
                                             <input placeholder="비밀번호 재입력" type="password" value="" id="userpwcheck" name="userpwcheck" class="etcInput">
                                             <span class="focus-border"></span>
-                                            <div class="isPWCkBox">
+                                            <div class="isPWCBox">
                                                 <span class="isPWC"></span>
                                             </div>
                                         </td>
@@ -77,7 +74,7 @@
                                     </tr>
                                     <tr>
                                         <td>
-                                            <input autocomplete="off"placeholder="이름" type="text" value="" id="username"name="username" class="etcInput">
+                                            <input autocomplete="off" placeholder="이름" type="text" value="" id="username"name="username" class="etcInput">
                                             <span class="focus-border"></span>
                                         </td>
                                     </tr>
@@ -86,7 +83,7 @@
                                     </tr>
                                     <tr>
                                         <td>
-                                            <input tabindex="6" placeholder="전화번호" type="text" value="" id="userpnum" name="userpnum" class="etcInput">
+                                            <input placeholder="전화번호" type="text" value="" id="userpnum" name="userpnum" class="etcInput">
                                             <span class="focus-border"></span>
                                         </td>
                                     </tr>
@@ -143,12 +140,21 @@
                         </div>
                         <div class="btnBox">
                             <section>
-                                <button class="accountSubmit" onclick="return sendit()">회원가입</button>
+                                <button class="accountSubmit">회원가입</button>
                                 <button class="accountCancel">취소</button>
                             </section>
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+    </div>
+    <div class="background">
+        <div class="modal">
+            <h6>회원 가입을 완료 하시겠습니까?</h6>
+            <div class="descBtn">
+                <button class="modalAccept">확인</button>
+                <button class="modalCancel">취소</button>
             </div>
         </div>
     </div>

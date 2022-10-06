@@ -6,9 +6,10 @@ $(function (){
     const hp = $('#userpnum');
     const email = $('#useremail');
     const isIdCheck = $('#isidCheck');
+    const isPWCheck = $('#ispwCheck')
 
     const expIdText = /^[a-z]+[a-z0-9]{5,19}$/g;
-    const expPWText = /^(?=.*[a-zA-z])(?=.*[0-9])(?=.*[$`~!@$!%*#^?&\\(\\)\-_=+]).{8,16}$/;
+    const expPWText = /(?=.*\d{1,})(?=.*[~`!@#$%\^&*()-+=]{1,})(?=.*[a-zA-Z]{2,}).{8,16}$/;
     const expNumberText = /^[0-9]+$/;
     const expNameText = /[가-힣]+$/;
     const expHpText = /^\d{3}-\d{3,4}-\d{4}$/;
@@ -26,20 +27,31 @@ $(function (){
             $(".isId").html("한글금지").css("color","red")
         }
         else {
-            $(".isId").html("")
+            $(".isId").html("사용가능").css("color", "#12B886")
             isIdCheck.value = 'y'
         }
         // 아이디 중복 검사 추가 필요
     })
     userpw.change(function(){
-        let pwCheck1;
+        let pwcValue;
         userpw_re.each(function(){
-            pwCheck1 = this.value;
+            pwcValue = this.value;
         })
         $(".isPWC").html("불일치").css("color", "red")
-        isPWCheck.value = 'n'
-        if(this.value != expPWText){
-            $("")
+        isPWCheck.value = 'n';
+        console.log(this.value)
+        if(this.value.length < 8){
+            $(".isPW").html("8자이상").css("color", "red")
+            isPWCheck.value = 'n'
+        }else if(this.value.length > 16){
+            $(".isPW").html("16자이하").css("color", "red")
+            isPWCheck.value = 'n'
+        }else if(!expPWText.test(this.value)){
+            $(".isPW").html("영문+숫자+특수문자").css("color", "red")
+            isPWCheck.value = 'n'
+        }else{
+            $(".isPW").html("사용가능").css("color", "#12B886")
+            isPWCheck.value = 'y'
         }
     })
     userpw_re.change(function(){
@@ -55,8 +67,13 @@ $(function (){
             isPWCheck.value = 'y'
         }
     })
-
-    
+    $(".accountSubmit").click(function(){
+        console.log(sendit())
+        if(sendit()){
+            console.log(true)
+            $(".background").fadeIn(500)
+        }
+    })
 })
 function sendit() {
     const userid = document.getElementById("userid");
@@ -90,16 +107,8 @@ function sendit() {
         alert('비밀번호를 입력하세요');
         userpw.focus();
         return false;
-    }
-    if(userpw.value.length < 4 || userpw.value.length > 20){
-        alert('비밀번호는 4자이상 20자이하로 입력하세요');
-        userpw.focus();
-        return false;
-    }
-    if(userpw.value != userpw_re.value){
-        alert('비밀번호와 비밀번호 확인의 값이 다릅니다')
-        userpw_re.focus();
-        return false;
+    }else {
+        isPWCheck.value = 'y'
     }
 
     // phone number
@@ -117,7 +126,7 @@ function sendit() {
     }
 
     // join success
-    if(isIdCheck == 'y' && isPWCheck == 'y'){
+    if(isIdCheck.value == 'y' && isPWCheck.value == 'y'){
         return true;
     }
 }
