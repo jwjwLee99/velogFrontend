@@ -17,19 +17,27 @@ section {
     margin-top: 1rem;
 }
 section table {
-    position: relative;;
+    position: relative;
     width: 50%;
     margin: 0 auto;
+    border-bottom: 1px solid rgb(18, 184, 134, 0.6);
 }
 section table tr {
     height: 4rem;
+    width: 500px;
+    overflow: hidden;
+}
+section table .last {
+    border-top: 1px solid rgb(18, 184, 134, 0.6);
+}
+.last td {
+    padding-top: 20px;
 }
 section table tr:nth-child(odd){
-    height: 2rem;
+    height: 2.5rem;
 }
 section table tr:nth-child(2n){
-    margin-bottom: 10px;
-    height: 5rem;
+    height: 6rem;
 }
 section table tr td {
     font-weight: bold;
@@ -38,13 +46,14 @@ section table tr td {
 }
 section table tr td input{
     appearance: none;
-    width: 480px;
+    width: 475px;
     height: 2.25rem;
     border: none;
     outline: none;
-    box-shadow: 0 2px 1px rgba(0,0,0,0.06), 0 0px 0px rgba(0,0,0,0.06);
+    border-bottom: 1px solid rgba(0,0,0,0.06);
 }
 .focus-border{
+    visibility: hidden;
     position: relative;
     left: 0;
     bottom: 15px;
@@ -61,6 +70,14 @@ section table tr td input{
     padding: 5px;
     color: #12B886;
 }
+.isPwBox {
+    position: absolute;
+    right: 0;
+    top: 275px;
+    width: 120px;
+    text-align: center;
+    color: #12B886;
+}
 .isPWCBox {
     position: absolute;
     right: 0;
@@ -72,11 +89,12 @@ section table tr td input{
 .tt {
     color: #495057;
 }
-.tt span {
+span {
     margin-right: 5px;
     color: red;
 }
 .btnBox {
+    margin-top: 50px;
     margin-bottom: 100px;
 }
 .btnBox section {
@@ -105,4 +123,45 @@ section table tr td input{
 }
 .btnBox section button.accountCancel:hover {
     background: #F8F9FA;
+}
+.etcNotice {
+    text-align: right;
+    width: 100%;
+}
+strong {
+    margin-right: 220px;
+    vertical-align: middle;
+}
+.selection{
+    color: #212529;
+    width: 14rem;
+}
+ul {
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+}
+ul li {
+    height: 2rem;
+    display: flex;
+    align-items: center;
+}
+.checkBox {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    width: 2.875rem;
+    height: 1.5rem;
+    background: rgb(134, 142, 150);
+    transition: all 0.124s ease-in 0s;
+    border-radius: 1.125rem;
+    padding: 0.125rem;
+    border: none;
+}
+.circle {
+    position: relative;
+    width: 1.25rem;
+    height: 1.25rem;
+    border-radius: 0.625rem;
+    background: #FFF;
 }
