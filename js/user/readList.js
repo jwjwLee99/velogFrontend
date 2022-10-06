@@ -2,32 +2,28 @@ $(() => {
     let likePostBtn = $(".likePost")
     let recentPostBtn = $(".recentPost")
 
-    let main1 = $(".mainPost1")
+    let main1 = $(".mainPost")
     let main2 = $(".mainPost2")
 
     let underline = $(".underLine")
 
-
-
-    trandingBtn.click(() => {
+    likePostBtn.click(() => {
         likePostBtn.addClass("active")
         recentPostBtn.removeClass("active")
-        mainPost1.css("display", "flex")
-        mainPost2.css("display", "none")
-        rightMenuBtn.css("display", "flex")
+        main1.css("display", "flex")
+        main2.css("display", "none")
         underline.animate({
-            left: "0%"
+            right: "50%"
         }, 300)
     })
 
-    latestBtn.click(() => {
-        trandingBtn.removeClass("active")
-        latestBtn.addClass("active")
+    recentPostBtn.click(() => {
+        likePostBtn.removeClass("active")
+        recentPostBtn.addClass("active")
         main1.css("display", "none")
         main2.css("display", "flex")
-        rightMenuBtn.css("display", "none")
         underline.animate({
-            left: "50%"
+            right: "0%"
         }, 300)
     })
 })

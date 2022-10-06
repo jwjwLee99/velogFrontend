@@ -10,6 +10,7 @@
 }
 
 .mainPost2 {
+  display:none;
   margin-top: 1.5rem;
   width: 1728px;
   margin-left: auto;
@@ -38,11 +39,6 @@
   text-decoration: none;
 }
 
-.recentPost {
-  font-weight: bold;
-  color: #212529;
-}
-
 .postButtom {
   height: 2px;
   display: block;
@@ -51,6 +47,18 @@
   background: #343A40;
 }
 
+.postButton.active {
+  font-weight: bold;
+  color: #212529;
+}
+
+.postButton.underLine {
+  height: 2px;
+  display: block;
+  position: absolute;
+  bottom: 0px;
+  background: #343A40;
+}
 .posts-top {
   margin-top: 3rem;
 }
@@ -188,3 +196,4 @@
   height: 0.75rem;
   margin-right: 0.5rem;
 }
+
