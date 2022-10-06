@@ -42,14 +42,15 @@ $(() => {
         $(".etcMenuBox").fadeIn(200)
         $(".background").fadeIn(200)
     })
+    
     $(".etcMenuBox ul li").click(() => {
         $(".etcMenuBox").fadeOut(200)
     })
+    
     $(".background").click(() => {
         $(".etcMenuBox").fadeOut(200)
         $(".background").fadeOut(200)
     })
 
     // recentSelect 메뉴목록 active 활성화
-    $(".")
 })

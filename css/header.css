@@ -350,6 +350,7 @@ header .section {
     top: 100%;
     z-index: 5;
 }
+
 .rightMenu .recentMenu {
     margin-top: 0.5rem;
     width: 12rem;
@@ -357,13 +358,35 @@ header .section {
     background: #fff;
     color: #212529;
     transform-origin: right top;
+    opacity: 1;
+    transform: scale(1);
+}
+.rightMenu .recentMenu ul :hover {
+    background: #F8F9FA;
 }
 
+.rightMenu .recentMenu ul {
+    list-style: none;
+    padding-left: 0px;
+    margin: 0px;
+    display: block;
+}
 .rightMenu .recentMenu li {
     cursor: pointer;
     font-weight: 600;
     font-size: 0.875rem;
     padding: 0.75rem 1rem;
+    border-top: 1px solid #F1F3F5;
+}
+
+.rightMenu .recentMenu ul li a {
+    display: block;
+    color: inherit;
+    text-decoration: none;
+}
+
+.rightMenu .recentMenu ul li a.active :visited {
+    color: #12B886;
 }
 
 .background {
@@ -414,10 +437,12 @@ header .section {
     padding-left: 0px;
     margin: 0px;
 }
+
 .section .etcMenuBox .etcMenuContents ul li {
     font-weight: 600;
     font-size: 0.875rem;
     padding: 0px;
+    border-top: 1px solid #F1F3F5;
 }
 .section .etcMenuBox .etcMenuContents ul li a{
     display: block;
@@ -425,6 +450,11 @@ header .section {
     color: inherit;
     text-decoration: none;
 }
+
+.section .etcMenuBox .etcMenuContents ul li :hover {
+    color: #12B886;
+}
+
 .section .etcMenuBox .ask {
     border-top: 1px solid #DEE2E6;
     padding: 1rem;
