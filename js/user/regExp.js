@@ -78,6 +78,7 @@ function sendit() {
     // id
     if(userid.value == ''){
         alert('아이디를 입력하세요');
+        $(window).scrollTop(0);
         userid.focus();
         return false;
     }else {
