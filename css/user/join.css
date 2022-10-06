@@ -135,6 +135,7 @@ strong {
 .selection{
     color: #212529;
     width: 14rem;
+    font-size: 1rem;
 }
 ul {
     list-style: none;
@@ -142,7 +143,7 @@ ul {
     padding: 0px;
 }
 ul li {
-    height: 2rem;
+    height: 3rem;
     display: flex;
     align-items: center;
 }
@@ -157,6 +158,7 @@ ul li {
     border-radius: 1.125rem;
     padding: 0.125rem;
     border: none;
+    margin-left: 150px;
 }
 .circle {
     position: relative;
