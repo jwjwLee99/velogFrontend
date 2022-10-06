@@ -50,14 +50,26 @@
     flex-direction: column;
 }
 
+.post-img {
+    display: block;
+    color: inherit;
+    text-decoration: none;
+}
+
 .img-size { /*여기 클래스 어떻게 사용되는지 알아보기 */
     width: 100%;
     position: relative;
+    padding-top: 52.1921%;
 }
 
-.post-img {
+.img-size img {
+    position: absolute;
+    top: 0px;
+    left: 0px;
     width: 100%;
-    position: relative;
+    height: 100%;
+    display: block;
+    object-fit: cover;
 }
 
 .preview-padding {
@@ -65,6 +77,7 @@
     display: flex;
     flex: 1 1 0%;
     flex-direction: column;
+    margin-bottom: -1rem;
 }
 
 .preview-post {
@@ -72,25 +85,64 @@
     color: inherit;
     text-decoration: none;
 }
-
+.preview-post h4 {
+    font-size: 1rem;
+    margin: 0px 0px 0.25rem;
+    line-height: 1.5;
+    word-break: break-word;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    color: #212529;
+}
+h4 {
+    display: block;
+    margin-block-start: 1.33em;
+    margin-block-end: 1.33em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
 .desciption-wrapper {
     flex: 1 1 0%;
 }
 
-.sub-info {
-    font-size: 0.75rem;
+.desciption-wrapper p {
+    margin: 0px 0px 1.5rem;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    font-size: 0.875rem;
     line-height: 1.5;
-    color: var(--text3);
+    height: 3.9375rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: #495057;
 }
 
-.separator {
+p {
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+.preview-padding .sub-info {
+    font-size: 0.75rem;
+    line-height: 1.5;
+    color: #868E96;
+}
+
+.preview-padding .separator {
     margin-left: 0.25rem;
     margin-right: 0.25rem;
 }
 
 .writer-info {
     padding: 0.625rem 1rem;
-    border-top: 1px solid var(--border4);
+    border-top: 1px solid #F1F3F5;
     display: flex;
     font-size: 0.75rem;
     line-height: 1.5;
@@ -98,7 +150,7 @@
     justify-content: space-between;
 }
 
-.user-info {
+.writer-info .user-info {
     text-decoration: none;
     color: inherit;
     display: flex;
@@ -106,13 +158,33 @@
     align-items: center;
 }
 
-.like {
+.writer-info .user-info img {
+    object-fit: cover;
+    border-radius: 50%;
+    width: 1.5rem;
+    height: 1.5rem;
+    display: block;
+    margin-right: 0.5rem;
+}
+
+.writer-info .user-info span {
+    color: #868E96;
+}
+
+.writer-info .user-info span b {
+    color:#212529;
+}
+b {
+    font-weight: bold;
+}
+
+.writer-info .like {
     display: flex;
     -webkit-box-align: center;
     align-items: center;
 }
 
-.likes svg {
+.writer-info .likes svg {
     width: 0.75rem;
     height: 0.75rem;
     margin-right: 0.5rem;

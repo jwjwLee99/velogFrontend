@@ -1,5 +1,7 @@
 // index.js
+
 $(() => {
+    // 트렌딩 최신 active활성화
     let trandingBtn = $(".tranding")
     let latestBtn = $(".latest")
 
@@ -31,4 +33,25 @@ $(() => {
             left: "50%"
         }, 300)
     })
+    /*
+    $(".rightMenu").click(() => {
+        $(".recentMenu ul li a").removeClass("active")
+    })
+    
+    $(".today").click(() => {
+        $(".today").addClass("active")
+    })
+
+    $(".week").click(() => {
+        $(".week").addClass("active")
+    })
+
+    $(".month").click(() => {
+        $(".month").addClass("active")
+    })
+
+    $(".year").click(() => {
+        $(".year").addClass("active")
+    })
+    */
 })
