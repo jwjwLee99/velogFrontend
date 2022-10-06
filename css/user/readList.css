@@ -1,3 +1,7 @@
+#container {
+  margin-top: 6rem;
+}
+
 .mainPost {
   margin-top: 1.5rem;
   width: 1728px;
@@ -5,7 +9,14 @@
   margin-right: auto;
 }
 
+.mainPost2 {
+  margin-top: 1.5rem;
+  width: 1728px;
+  margin-left: auto;
+  margin-right: auto;
+}
 .postMenu {
+  margin-top: 1.5rem;
   display: flex;
 }
 
@@ -32,7 +43,7 @@
   color: #212529;
 }
 
-.postBottom {
+.postButtom {
   height: 2px;
   display: block;
   position: absolute;
@@ -41,7 +52,7 @@
 }
 
 .posts-top {
-  margin-top: 2rem;
+  margin-top: 3rem;
 }
 
 .posts {
