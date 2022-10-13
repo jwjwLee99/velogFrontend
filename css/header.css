@@ -223,7 +223,7 @@ nav button.userLoginBtn {
 /* login 후 */
 nav div div.userSection {
     cursor: pointer;
-    display: none;
+    display: flex;
     -webkit-box-align: center;
     align-items: center;
 }
