@@ -1,6 +1,6 @@
 // index.js
 
-$(() => {
+$(function() {
     // 트렌딩 최신 active활성화
     let trandingBtn = $(".tranding")
     let latestBtn = $(".latest")
@@ -33,25 +33,45 @@ $(() => {
             left: "50%"
         }, 300)
     })
-    /*
-    $(".rightMenu").click(() => {
-        $(".recentMenu ul li a").removeClass("active")
-    })
+
     
-    $(".today").click(() => {
-        $(".today").addClass("active")
+    let today =  $(".today")
+    let week = $(".week")
+    let month = $(".month")
+    let year = $(".year")
+
+    $(".recentSelect span").text($(".active-list").text())
+
+    $(".today").click(function(){
+        $(".today").addClass("active-list")
+        week.removeClass("active-list")
+        month.removeClass("active-list")
+        year.removeClass("active-list")
+        $(".recentSelect span").text("오늘")
     })
 
-    $(".week").click(() => {
-        $(".week").addClass("active")
+    $(".week").click(function(){
+        $(".week").addClass("active-list")
+        today.removeClass("active-list")
+        month.removeClass("active-list")
+        year.removeClass("active-list")
+        $(".recentSelect span").text("이번 주")
     })
 
-    $(".month").click(() => {
-        $(".month").addClass("active")
+    $(".month").click(function(){
+        $(".month").addClass("active-list")
+        week.removeClass("active-list")
+        today.removeClass("active-list")
+        year.removeClass("active-list")
+        $(".recentSelect span").text("이번 달")
     })
 
-    $(".year").click(() => {
-        $(".year").addClass("active")
+    $(".year").click(function(){
+        $(".year").addClass("active-list")
+        week.removeClass("active-list")
+        month.removeClass("active-list")
+        today.removeClass("active-list")
+        $(".recentSelect span").text("올해")
     })
-    */
+
 })
