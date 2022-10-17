@@ -6,6 +6,9 @@
   padding-bottom: 5rem;
 }
 
+.headerBox{
+  height: 64px !important;
+}
 div {
   display: block;
 }
@@ -615,4 +618,8 @@ form {
   display: flex;
   -webkit-box-pack: end;
   justify-content: flex-end;
+}
+
+.image_inputType_file{
+  display: none;
 }
