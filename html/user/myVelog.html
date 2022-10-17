@@ -415,35 +415,34 @@
                         </div>
                         <!-- 소개 없을 때 끝 -->
                     </div>
+                    <!-- 소개 글 작성 -->
                     <div class="introBox">
-                        <!-- 소개 글 작성 -->
                         <div class="rightIntroduceBox">
                             <div class="saveIntroduce">
                                 <button color="teal" class="saveBtn">저장하기</button>
                             </div>
                             <div class="writeIntroduceBox">
                                 <div class="writeIntroduce">
-                                    <textarea style="border: none; display: none;"></textarea>
-                                    <div class="CodeMirror CodeMirror-wrap CodeMirror-empty">
-                                        <div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 3.99304px; left: 3.99306px;">
-                                            <textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0"
-                                            style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea>
-                                        </div>
-                                        <div class="CodeMirror-vscrollbar" tabindex="-1" cm-not-content="true">
-                                            <div style="min-width: 1px; height: 0px"></div>
-                                        </div>
-                                        <div class="CodeMirror-hscrollbar" tabindex="-1" cm-not-content="true">
-                                            <div style="height: 100%; min-height: 1px; width: 0px;"></div>
-                                        </div>
-                                        <div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div>
-                                        <div class="CodeMirror-gutter-filler" cm-not-content="true"></div>
-                                        
-                                    </div>
+                                    <textarea style="border: none; outline: none; resize: none; display: flex; overflow: hidden;" onkeyup="resize(this)" onkeydown="resize(this)" placeholder="당신은 어떤 사람인가요? 당신에 대해서 알려주세요."></textarea>
                                 </div>
                             </div>
                         </div>
-                        <!-- 소개 글 작성 끝 -->
                     </div>
+                    <!-- 소개 글 작성 끝 -->
+                    <!-- 소개 글 수정 -->
+                    <div class="introReviseBox">
+                        <div class="reviseIntroduceBox">
+                            <div class="reviseIntroduce">
+                                <button color="teal" class="reviseBtn">수정하기</button>
+                            </div>
+                            <div class="writeReviseBox">
+                                <div class="writeIntroduce">
+                                    <textarea style="border: none; outline: none; resize: none; display: flex; overflow: hidden;" onkeyup="resize(this)" onkeydown="resize(this)" placeholder="당신은 어떤 사람인가요? 당신에 대해서 알려주세요."></textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 소개 글 수정 끝 -->
                 </section>
                 <!-- 소개 끝 -->
 
