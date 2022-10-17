@@ -23,12 +23,10 @@ textarea {
     font-family: inherit;
 }
 
-.CodeMirror {
-    font-family: monospace;
-    height: 300px;
-    color: black;
-    direction: ltr;
-  }
+#scrollMoveHeader {
+    height: 3.6rem;
+}
+
 /* 여기도 나중에 설정 해보기 */
 /* .invisiblePosition{
 
@@ -565,6 +563,7 @@ textarea {
     margin-bottom: 1.5rem;
     justify-content: flex-end;
 }
+
 .saveBtn {
     display: inline-flex;
     -webkit-box-align: center;
@@ -583,55 +582,56 @@ textarea {
     font-size: 1.125rem;
 }
 
-.writeIntroduce .CodeMirror {
-    height: auto;
+.writeIntroduce textarea {
+    width: 100%;
+}
+
+.writeIntroduce textarea::placeholder {
+    font-style: italic;
+    color: #868E96;
+}
+
+/* 소개글 수정 */
+
+.introduce .introReviseBox {
+    display: none;
+    width: 100%;
+}
+
+.reviseIntroduceBox {
+    width: 100%;
+}
+
+.reviseIntroduce {
+    width: 100%;
+    display: flex;
+    margin-bottom: 1.5rem;
+    justify-content: flex-end;
+}
+
+.reviseBtn {
+    display: inline-flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    font-weight: bold;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    background: #12B886;
+    color: #FFFFFF;
+    border-radius: 4px;
+    padding: 0px 1.125rem;
+    height: 2.5rem;
     font-size: 1.125rem;
-    line-height: 1.5;
-    color: #212529;
-    font-family: "Fira Mono", monospace;
 }
 
-.CodeMirror {
-    position: relative;
-    overflow: hidden;
-    background: #FFFFFF;
+.writeReviseBox  textarea {
+    width: 100%;
 }
 
-.CodeMirror-vscrollbar {
-    right: 0;
-    top: 0;
-    overflow-x: hidden;
-    overflow-y: scroll;
-    position: absolute;
-    z-index: 6;
-    display: none;
+.writeReviseduce textarea::placeholder {
+    font-style: italic;
+    color: #868E96;
 }
-
-.CodeMirror-hscrollbar {
-    bottom: 0;
-    left: 0;
-    overflow-y: hidden;
-    overflow-x: scroll;
-    position: absolute;
-    z-index: 6;
-    display: none;
-}
-
-.CodeMirror-scrollbar-filler {
-    right: 0;
-    bottom: 0;
-    position: absolute;
-    z-index: 6;
-    display: none;
-    background-color: #fff;
-}
-
-.CodeMirror-gutter-filler {
-    left: 0;
-    bottom: 0;
-    position: absolute;
-    z-index: 6;
-    display: none;
-    background-color: #fff;
-}
-
