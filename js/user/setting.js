@@ -67,6 +67,7 @@ $(() => {
   let correctionBtn = $(".profile-correction")
   let userInfo = $(".user-info")
   let correctionInfo = $(".correction-info")
+  let saveInfo = $(".s1")
 
   correctionBtn.click(() => {
     userInfo.css("display","none")
@@ -75,12 +76,20 @@ $(() => {
     correctionInfo.css("flex-direction","column")
 
   })
+    saveInfo.click(() => {
+      correctionInfo.css("display","none")
+
+      userInfo.css("display","flex")
+      userInfo.css("flex-direction","column")
+      userInfo.css("align-items","flex-start")
+    })
 
 
   //벨로그 제목 수정
   let tittleBtn = $(".correctionBtn")
   let pasiveT = $(".passive")
   let activeT = $(".active")
+  let saveT = $(".s2")
 
   tittleBtn.click(() => {
     pasiveT.css("display","none")
@@ -90,15 +99,28 @@ $(() => {
 
   })
 
-  //소셜 추가
-  let addInfo = $(".add-infoBtn")
-  let addAddress = $(".add-address")
+  saveT.click(() => {
+    activeT.css("display","none")
+    
+    pasiveT.css("display","flex")
+  })
 
-  addInfo.click(() => {
-    addInfo.css("display", "none")
+  //소셜 추가
+  let addSocial = $(".add-infoBtn")
+  let addAddress = $(".add-address")
+  let saveS = $(".s3")
+
+  addSocial.click(() => {
+    addSocial.css("display", "none")
 
     addAddress.css("display","flex")
     addAddress.css("flex-direction","column")
+  })
+
+  saveS.click(() => {
+    addAddress.css("display","none")
+
+    addSocial.css("display","flex")
   })
   
   /* 파일 업로드 부분
