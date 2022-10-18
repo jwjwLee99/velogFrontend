@@ -63,3 +63,10 @@ $(function() {
         $(".introBox").css("display", "flex")
     })
 })
+
+// 소개 글 추가 textarea height 자동 조절 js
+
+function resize(obj) {
+    obj.style.height = (12+obj.scrollHeight)+"px";
+}
+  
