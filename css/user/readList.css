@@ -2,6 +2,10 @@
   margin-top: 6rem;
 }
 
+.headerBox{
+  height: 64px !important;
+}
+
 .mainPost {
   margin-top: 1.5rem;
   width: 1728px;
