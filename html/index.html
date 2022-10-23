@@ -28,7 +28,8 @@
         <header>
             <div class="headerBox">
                 <div class="logo">
-                    <div class="indexLogo"> <!-- velog로고 -->
+                    <div class="indexLogo">
+                        <!-- velog로고 -->
                         <a href="">
                             <svg width="71" height="24" viewBox="0 0 71 24" fill="none" data-testid="velog-logo"
                                 class="velog-logo">
@@ -63,13 +64,15 @@
                     </button>
                     <div>
                         <button class="userLoginBtn">로그인</button>
-                        <div class="userSection">
-                            <img src="https://cdn4.iconfinder.com/data/icons/linecon/512/photo-256.png" alt="user"
-                                srcset="">
-                            <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24"
-                                height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M7 10l5 5 5-5z"></path>
-                            </svg>
+                        <div class="dpNone">
+                            <div class="userSection">
+                                <img src="https://cdn4.iconfinder.com/data/icons/linecon/512/photo-256.png" alt="user"
+                                    srcset="">
+                                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24"
+                                    height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M7 10l5 5 5-5z"></path>
+                                </svg>
+                            </div>
                         </div>
                     </div>
                 </nav>
@@ -209,13 +212,15 @@
                     </button>
                     <div>
                         <button class="userLoginBtn">로그인</button>
-                        <div class="userSection">
-                            <img src="https://cdn4.iconfinder.com/data/icons/linecon/512/photo-256.png" alt="user"
-                                srcset="">
-                            <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24"
-                                height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M7 10l5 5 5-5z"></path>
-                            </svg>
+                        <div class="dpNone">
+                            <div class="userSection">
+                                <img src="https://cdn4.iconfinder.com/data/icons/linecon/512/photo-256.png" alt="user"
+                                    srcset="">
+                                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24"
+                                    height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M7 10l5 5 5-5z"></path>
+                                </svg>
+                            </div>
                         </div>
                     </div>
                 </nav>
@@ -246,7 +251,7 @@
                                 <div class="underLine"></div>
                             </div>
                             <div class="recentSelect">
-                                이번주
+                                이번 주
                                 <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24"
                                     height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M7 10l5 5 5-5z"></path>
@@ -323,6 +328,7 @@
             <div class="main-list">
                 <main class="list-box">
                     <div class="all-post">
+                        <!-- 썸네일 사진 있을 때 포스트 -->
                         <div class="post-margin">
                             <!-- 메인화면 포스트 img-->
                             <a class="post-img" href="">
@@ -372,6 +378,51 @@
                             </div>
                             <!-- 작성자 이름, 좋아요 끝-->
                         </div>
+                        <!-- 썸네일 사진 있을 때 포스트 끝 -->
+                        <!-- 썸네일 사진 없을 때 포스트 -->
+                        <div class="post-margin">
+                            <!-- 메인화면 포스트 미리보기 -->
+                            <div class="preview-padding">
+                                <a class="preview-post" href="">
+                                    <h4>글 제목 미리보기</h4>
+                                    <div class="desciption-wrapper">
+                                        <p>글 미리보기샬라샬라샤라라라라라라라라ㅏ라라라라라라라라ㅏ라랄라라라</p>
+                                    </div>
+                                </a>
+                                <!-- 메인화면 포스트 미리보기 끝 -->
+                                <!-- 몇일 전, 댓글 -->
+                                <div class="sub-info">
+                                    <span>글쓴지 몇일전인지</span>
+                                    <span class="separator">.</span>
+                                    <span>
+                                        "(댓글 개수)"
+                                        "개의 댓글"
+                                    </span>
+                                </div>
+                            </div>
+                            <!-- 몇일 전, 댓글 끝 -->
+                            <!-- 작성자 이름, 좋아요 -->
+                            <div class="writer-info">
+                                <a class="user-info" href="">
+                                    <img src="" alt="user thumbnail of ~~">
+                                    <span>
+                                        "by "
+                                        <b>
+                                            <!--작성자 이름 -->유녀누
+                                        </b>
+                                    </span>
+                                </a>
+                                <div class="likes">
+                                    <svg width="24" height="24" viewBox="0 0 24 24">
+                                        <path fill="currentColor" d="M18 1l-6 4-6-4-6 5v7l12 10 12-10v-7z"></path>
+                                    </svg>
+                                    <!--좋아요 개수-->
+                                    "202"
+                                </div>
+                            </div>
+                            <!-- 작성자 이름, 좋아요 끝-->
+                        </div>
+                        <!-- 썸네일 사진 없을 때 포스트 끝 -->
                         <div class="post-margin">
                             <!-- 메인화면 포스트 img-->
                             <a class="post-img" href="">
